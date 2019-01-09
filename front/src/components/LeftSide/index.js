@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import './index.css';
-import LeftSide from '../LeftSide/index';
 
-class Simulator extends Component {
+class LeftSide extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
   }
 
-
   render() {
     return (
       <div>
-        <LeftSide />
+        soon
       </div>
     );
   }
 }
 
-export default Simulator;
+export default LeftSide;
