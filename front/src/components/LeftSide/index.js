@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import PackageList from '../PackageList/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class LeftSide extends Component {
   render() {
     return (
       <div>
-        soon
+        <PackageList />
       </div>
     );
   }
