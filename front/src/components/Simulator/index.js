@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import { withRouter } from 'react-router';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 
@@ -12,13 +13,18 @@ class Simulator extends Component {
 
 
   render() {
+    if (this.props.location.pathname === '/1') {
+      return (
+        <div>
+          <StepBar />
+          <LeftSide />
+        </div>
+      );
+    }
     return (
-      <div>
-        <StepBar />
-        <LeftSide />
-      </div>
+      <p>NOOO</p>
     );
   }
 }
 
-export default Simulator;
+export default withRouter(Simulator);
