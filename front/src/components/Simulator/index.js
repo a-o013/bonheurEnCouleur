@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import LeftSide from '../LeftSide/index';
+import StepBar from '../StepBar/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Simulator extends Component {
   render() {
     return (
       <div>
+        <StepBar />
         <LeftSide />
       </div>
     );
