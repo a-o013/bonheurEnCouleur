@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
-import SimulatorList from './components/SimulatorList/index'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Simulator from './components/Simulator/index';
 
 const App = () => (
   <div className="App">
     <header className="App-header" />
-    <SimulatorList />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/1" component={Simulator} />
+      </Switch>
+    </BrowserRouter>
   </div>
 );
 

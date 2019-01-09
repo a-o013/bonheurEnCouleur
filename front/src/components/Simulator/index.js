@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import './index.css';
 
-class SimulatorList extends Component {
+class Simulator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 0,
     };
   }
 
 
   render() {
     return (
-      <ul>
-        {console.log(this.state)}
-      </ul>
+      <div>
+          soon
+      </div>
     );
   }
 }
 
-export default SimulatorList;
+export default Simulator;
