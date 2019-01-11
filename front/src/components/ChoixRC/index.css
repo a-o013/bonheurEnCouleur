@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.container_calendrier{
+    height: 500px;
+    width: 50%;
+    background-color:aliceblue;
+    margin: 10%;
+}
+.img_calendrier{
+    padding:20%;
+}
+.container_recharge{
+    height: 500px;
+    width: 50%;
+    background-color:aliceblue;
+    margin: 10%;
+}
+.img_recharge{
+    padding:20%;
+}
+.btn-choixCR{
+    padding: 10%;
+    text-align: center;
+}
