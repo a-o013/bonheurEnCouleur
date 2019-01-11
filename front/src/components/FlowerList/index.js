@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import Flower from '../Flower/index';
 
 const table = [
   {
@@ -53,7 +54,7 @@ class FlowerList extends Component {
 
   render() {
     const flowers = table.map(elem => (
-      <li key={elem.key}><img src={elem.image} alt="" /></li>
+      <Flower key={elem.key} image={elem.image} />
     ));
     return (
       <li>
