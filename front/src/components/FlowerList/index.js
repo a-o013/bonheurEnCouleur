@@ -27,22 +27,6 @@ const table = [
     image: 'grey.png',
     key: 6,
   },
-  {
-    image: 'grey.png',
-    key: 7,
-  },
-  {
-    image: 'grey.png',
-    key: 8,
-  },
-  {
-    image: 'grey.png',
-    key: 9,
-  },
-  {
-    image: 'grey.png',
-    key: 10,
-  },
 ];
 
 class FlowerList extends Component {
