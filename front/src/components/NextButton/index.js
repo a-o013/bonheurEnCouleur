@@ -15,7 +15,7 @@ class NextButton extends Component {
 
   render() {
     return (
-      <NavLink to={`/${this.props.current}`}><button type="button" onClick={() => this.handleClick()}>Suivant</button></NavLink>
+      <NavLink to={`/calendrier/${this.props.current}`}><button type="button" onClick={() => this.handleClick()}>Suivant</button></NavLink>
     );
   }
 }

@@ -8,7 +8,7 @@ const App = () => (
     <header className="App-header" />
     <BrowserRouter>
       <Switch>
-        <Route path="/:number" component={Simulator} />
+        <Route path="/:section/:step" component={Simulator} />
       </Switch>
     </BrowserRouter>
   </div>
