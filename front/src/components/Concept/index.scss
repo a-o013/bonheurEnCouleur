@@ -1,0 +1,73 @@
+.section{
+    background-size: cover;
+    background-position: 100%;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+.section1{
+    background-image: url(img1.png);
+    &_container_title{
+        margin:0px;
+        padding-left: 15px;
+    }
+}
+
+.section_container_text{
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.section2{
+    height: 80vh;
+    width: 100%;
+}
+.section_container_place{
+    text-align: center;
+    &_image{
+        height: 150px;
+        width: auto;
+    }
+}
+
+.section3{
+    background-image: url(img3.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container_img_all{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container_row{
+    opacity: 0;
+    visibility: hidden;
+    animation-name: fadeInUp;
+}
+.section_concept3{
+    background-image: url(img3.png);
+    background-position: 100% -18.7031px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 0;
+    position: relative;
+}*/
