@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { NavLink } from 'react-router-dom';
 
 class ChoixRC extends Component {
   constructor(props) {
@@ -13,11 +14,11 @@ class ChoixRC extends Component {
       <div className="container">
         <div className="container_calendrier">
           <img src="calendrier" alt="img" />
-          <button type="button">Calendrier</button>
+          <NavLink to="/calendrier/1"><button type="button">Calendrier</button></NavLink>
         </div>
         <div className="container_recharge">
           <img src="recharge" alt="img" />
-          <button type="button">Recharge</button>
+          <NavLink to="/recharge/1"><button type="button">Recharge</button></NavLink>
         </div>
       </div>
     );

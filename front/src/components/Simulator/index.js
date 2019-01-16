@@ -10,19 +10,26 @@ class Simulator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 1,
+      section: '',
+      step: 2,
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      section: this.props.location.pathname.substring(0, this.props.location.pathname.length - 1),
+    });
   }
 
   next() {
     this.setState(prevState => ({
-      current: prevState.current + 1,
+      step: prevState.step + 1,
     }));
   }
 
   previous() {
     this.setState(prevState => ({
-      current: prevState.current - 1,
+      step: prevState.step - 1,
     }));
   }
 
@@ -33,7 +40,11 @@ class Simulator extends Component {
           <p>1</p>
           <StepBar />
           <LeftSide />
-          <NextButton next={() => this.next()} current={this.state.current} />
+          <NextButton
+            next={() => this.next()}
+            step={this.state.step}
+            section={this.state.section}
+          />
           <PreviousButton previous={() => this.previous()} />
         </div>
       );
@@ -42,7 +53,11 @@ class Simulator extends Component {
       return (
         <div>
           <p>2</p>
-          <NextButton next={() => this.next()} current={this.state.current} />
+          <NextButton
+            next={() => this.next()}
+            step={this.state.step}
+            section={this.state.section}
+          />
           <PreviousButton previous={() => this.previous()} />
         </div>
       );
@@ -51,6 +66,27 @@ class Simulator extends Component {
       return (
         <div>
           <p>3</p>
+          <PreviousButton previous={() => this.previous()} />
+        </div>
+      );
+    }
+    if (this.props.location.pathname === '/recharge/1') {
+      return (
+        <div>
+          <p>1</p>
+          <NextButton
+            next={() => this.next()}
+            step={this.state.step}
+            section={this.state.section}
+          />
+          <PreviousButton previous={() => this.previous()} />
+        </div>
+      );
+    }
+    if (this.props.location.pathname === '/recharge/2') {
+      return (
+        <div>
+          <p>2</p>
           <PreviousButton previous={() => this.previous()} />
         </div>
       );
