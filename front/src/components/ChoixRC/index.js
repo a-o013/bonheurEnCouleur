@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.scss';
 
 class ChoixRC extends Component {
   constructor(props) {
@@ -11,20 +12,12 @@ class ChoixRC extends Component {
     return (
       <div className="container">
         <div className="container_calendrier">
-          <div className="img_calendrier">
-            <img src="calendrier" alt="img" />
-          </div>
-          <div className="btn-choixCR">
-            <button type="button">Calendrier</button>
-          </div>
+          <img src="calendrier" alt="img" />
+          <button type="button">Calendrier</button>
         </div>
         <div className="container_recharge">
-          <div className="img_recharge">
-            <img src="recharge" alt="img" />
-          </div>
-          <div className="btn-choixCR">
-            <button type="button">Recharge</button>
-          </div>
+          <img src="recharge" alt="img" />
+          <button type="button">Recharge</button>
         </div>
       </div>
     );
