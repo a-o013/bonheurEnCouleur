@@ -1,0 +1,74 @@
+@font-face {
+	font-family: "MoonFlowerBold";
+	src: url("./Moon\ Flower\ Bold.ttf");
+  }
+
+@font-face{
+	font-family: "Quicksand";
+	src: url("./Quicksand_Bold.otf");
+}
+
+//SMARTPHONE
+.navbar { 
+	margin: 0;
+	padding: 0 1em;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #F6F2F1;
+		&_tableau_welcome_link{
+			list-style: none;
+			text-decoration: none;
+			color: #DDAD9F;
+			font-size:30px;
+			font-family: "MoonFlowerBold";
+		}
+		&_tableau_concept {
+			list-style: none;
+		}
+		&_tableau_concept a{
+			color:#102643;
+			text-decoration: none;
+			font-size: 16px;
+			font-family: "Quicksand";
+		}
+		&_tableau_welcome{
+			list-style: none;
+		}
+		&_tableau_welcome img{
+			list-style: none;
+			padding-right: .5em;
+		}
+		&_tableau{
+			padding: 0;
+			display: flex;
+			align-items: center;
+		}
+		&_tableau_concept--padding{
+			padding-left: 0.5em;
+		}
+		
+}
+
+.navbar_tableau_concept a:hover {
+  color: #CFE3E1;
+}
+.logomenu{
+	width: 35px;
+	display: block;
+}
+
+//ORDINATEUR
+@media only screen and (min-width: 768px){
+	.navbar{
+		padding: 0 3em;
+	
+		&_tableau_welcome img{
+			padding-right: .7em;
+		}
+		&_tableau_concept--padding {
+			padding-left: 4em;
+		}
+	}
+}
