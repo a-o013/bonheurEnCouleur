@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 import { withRouter } from 'react-router';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
@@ -37,57 +37,70 @@ class Simulator extends Component {
     if (this.props.location.pathname === '/calendrier/1') {
       return (
         <div>
-          <p>1</p>
-          <StepBar />
+          <div className="step-container">
+            <StepBar />
+            <PreviousButton previous={() => this.previous()} />
+            <NextButton
+              next={() => this.next()}
+              step={this.state.step}
+              section={this.state.section}
+            />
+          </div>
           <LeftSide />
-          <NextButton
-            next={() => this.next()}
-            step={this.state.step}
-            section={this.state.section}
-          />
-          <PreviousButton previous={() => this.previous()} />
         </div>
       );
     }
     if (this.props.location.pathname === '/calendrier/2') {
       return (
         <div>
-          <p>2</p>
-          <NextButton
-            next={() => this.next()}
-            step={this.state.step}
-            section={this.state.section}
-          />
-          <PreviousButton previous={() => this.previous()} />
+          <div className="step-container">
+            <StepBar />
+            <PreviousButton previous={() => this.previous()} />
+            <NextButton
+              next={() => this.next()}
+              step={this.state.step}
+              section={this.state.section}
+            />
+          </div>
+          <LeftSide />
         </div>
       );
     }
     if (this.props.location.pathname === '/calendrier/3') {
       return (
         <div>
-          <p>3</p>
-          <PreviousButton previous={() => this.previous()} />
+          <div className="step-container">
+            <StepBar />
+            <PreviousButton previous={() => this.previous()} />
+          </div>
+          <LeftSide />
         </div>
       );
     }
     if (this.props.location.pathname === '/recharge/1') {
       return (
         <div>
-          <p>1</p>
-          <NextButton
-            next={() => this.next()}
-            step={this.state.step}
-            section={this.state.section}
-          />
-          <PreviousButton previous={() => this.previous()} />
+          <div className="step-container">
+            <StepBar />
+            <PreviousButton previous={() => this.previous()} />
+            <NextButton
+              next={() => this.next()}
+              step={this.state.step}
+              section={this.state.section}
+            />
+          </div>
+          <LeftSide />
         </div>
       );
     }
     if (this.props.location.pathname === '/recharge/2') {
       return (
         <div>
-          <p>2</p>
-          <PreviousButton previous={() => this.previous()} />
+          <div className="step-container">
+            <StepBar />
+            <PreviousButton previous={() => this.previous()} />
+          </div>
+          <LeftSide />
         </div>
       );
     }

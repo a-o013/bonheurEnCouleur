@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 import { withRouter } from 'react-router-dom';
+import previous from '../../assets/arrow-left.svg';
 
 class PreviousButton extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class PreviousButton extends Component {
 
   render() {
     return (
-      <button type="button" onClick={() => this.navigateBack()}>Précédent</button>
+      <button type="button" className="previous" onClick={() => this.navigateBack()}><img src={previous} className="arrow" alt="previous" /></button>
     );
   }
 }

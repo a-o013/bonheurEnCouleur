@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import { withRouter } from 'react-router';
 import PackageList from '../PackageList/index';
 
 class LeftSide extends Component {
@@ -10,12 +11,37 @@ class LeftSide extends Component {
   }
 
   render() {
+    if (this.props.location.pathname === '/calendrier/1') {
+      return (
+        <p>Planches</p>
+      );
+    }
+    if (this.props.location.pathname === '/calendrier/2') {
+      return (
+        <div>
+          <PackageList />
+        </div>
+      );
+    }
+    if (this.props.location.pathname === '/calendrier/3') {
+      return (
+        <p>Formulaire</p>
+      );
+    }
+    if (this.props.location.pathname === '/recharge/1') {
+      return (
+        <p>Couleurs</p>
+      );
+    }
+    if (this.props.location.pathname === '/recharge/2') {
+      return (
+        <p>Formulaire</p>
+      );
+    }
     return (
-      <div>
-        <PackageList />
-      </div>
+      <p>ERREUR</p>
     );
   }
 }
 
-export default LeftSide;
+export default withRouter(LeftSide);

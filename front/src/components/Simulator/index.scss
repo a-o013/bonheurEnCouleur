@@ -1,0 +1,12 @@
+.step-container{
+    display:flex;
+    justify-content: center;
+    background-color: #F6F2F1;
+    height: 70px;
+}
+
+@media screen and (min-width: 1200px) {
+    .step-container {
+        width: 600px;
+    }
+}
