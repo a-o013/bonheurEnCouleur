@@ -5,6 +5,7 @@ import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
+import MonthList from '../MonthList/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -46,7 +47,12 @@ class Simulator extends Component {
               section={this.state.section}
             />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+            planche
+            </div>
+          </div>
         </div>
       );
     }
@@ -62,7 +68,12 @@ class Simulator extends Component {
               section={this.state.section}
             />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <MonthList />
+            </div>
+          </div>
         </div>
       );
     }
@@ -73,7 +84,12 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <MonthList />
+            </div>
+          </div>
         </div>
       );
     }
