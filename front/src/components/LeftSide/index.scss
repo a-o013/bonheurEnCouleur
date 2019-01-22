@@ -1,0 +1,13 @@
+.left-container {
+    z-index: -1;
+    position: relative
+}
+
+@media screen and (min-width: 1200px) {
+    .left-container {
+        background-color: white;
+        width: 600px;
+        height: calc(100vh - 70px);
+        z-index: 0;
+    }
+}

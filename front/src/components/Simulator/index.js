@@ -36,7 +36,7 @@ class Simulator extends Component {
   render() {
     if (this.props.location.pathname === '/calendrier/1') {
       return (
-        <div>
+        <div className="simulator-container">
           <div className="step-container">
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
@@ -52,7 +52,7 @@ class Simulator extends Component {
     }
     if (this.props.location.pathname === '/calendrier/2') {
       return (
-        <div>
+        <div className="simulator-container">
           <div className="step-container">
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
@@ -68,7 +68,7 @@ class Simulator extends Component {
     }
     if (this.props.location.pathname === '/calendrier/3') {
       return (
-        <div>
+        <div className="simulator-container">
           <div className="step-container">
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
@@ -79,7 +79,7 @@ class Simulator extends Component {
     }
     if (this.props.location.pathname === '/recharge/1') {
       return (
-        <div>
+        <div className="simulator-container">
           <div className="step-container">
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
@@ -95,7 +95,7 @@ class Simulator extends Component {
     }
     if (this.props.location.pathname === '/recharge/2') {
       return (
-        <div>
+        <div className="simulator-container">
           <div className="step-container">
             <StepBar />
             <PreviousButton previous={() => this.previous()} />
