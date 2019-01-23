@@ -11,14 +11,12 @@ class ChoixRC extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="container_calendrier">
-          <img src="calendrier" alt="img" />
-          <NavLink to="/calendrier/1"><button type="button">Calendrier</button></NavLink>
+      <div>
+        <div>
+          <NavLink to="/calendrier/1">Calendrier</NavLink>
         </div>
-        <div className="container_recharge">
-          <img src="recharge" alt="img" />
-          <NavLink to="/recharge/1"><button type="button">Recharge</button></NavLink>
+        <div>
+          <NavLink to="/recharge/1">Recharge</NavLink>
         </div>
       </div>
     );
