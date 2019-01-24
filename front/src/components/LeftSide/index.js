@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { withRouter } from 'react-router';
-import PackageList from '../PackageList/index';
+import ModelsList from '../ModelsList/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class LeftSide extends Component {
     if (this.props.location.pathname === '/calendrier/2') {
       return (
         <div className="left-container">
-          <PackageList />
+          <ModelsList />
         </div>
       );
     }

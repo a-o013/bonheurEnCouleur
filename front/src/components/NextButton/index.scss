@@ -1,13 +1,15 @@
 .next {
-    height: 100%;
-    width: 100%;
     background-color: #102643;
-    border: none;
-    outline: none;
     cursor: pointer;
-    padding-left: 30px;
-    padding-right: 70px;
+    padding-left: 45px;
+    padding-right: 55px;
+    display: flex;
+    align-items: center;
     .arrow {
         height: 40px
+    }
+    
+    &:hover {
+        background-color: #0a192c;
     }
 }

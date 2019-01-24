@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { withRouter } from 'react-router-dom';
-import previous from '../../assets/arrow-left.svg';
+import previous from '../../assets/images/arrow-left.svg';
 
 class PreviousButton extends Component {
   constructor(props) {

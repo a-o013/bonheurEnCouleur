@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
 
-class ChoixRC extends Component {
+class OrderSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,4 +23,4 @@ class ChoixRC extends Component {
   }
 }
 
-export default ChoixRC;
+export default OrderSection;

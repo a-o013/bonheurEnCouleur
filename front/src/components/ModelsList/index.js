@@ -20,7 +20,7 @@ const table = [
   },
 ];
 
-class PackageList extends Component {
+class ModelsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,15 +28,15 @@ class PackageList extends Component {
   }
 
   render() {
-    const packages = table.map(elem => (
+    const models = table.map(elem => (
       <li key={elem.key}><img src={elem.image} alt="" /></li>
     ));
     return (
       <ul>
-        {packages}
+        {models}
       </ul>
     );
   }
 }
 
-export default PackageList;
+export default ModelsList;

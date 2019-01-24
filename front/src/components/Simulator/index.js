@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { withRouter } from 'react-router';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
@@ -126,4 +125,4 @@ class Simulator extends Component {
   }
 }
 
-export default withRouter(Simulator);
+export default Simulator;

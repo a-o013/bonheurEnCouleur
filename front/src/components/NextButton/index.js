@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
-import next from '../../assets/arrow-right.svg';
+import next from '../../assets/images/arrow-right.svg';
 
 class NextButton extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class NextButton extends Component {
 
   render() {
     return (
-      <NavLink to={`${this.props.section}${this.props.step}`}><button type="button" className="next" onClick={() => this.handleClick()}><img src={next} className="arrow" alt="next" /></button></NavLink>
+      <NavLink to={`${this.props.section}${this.props.step}`} className="next" onClick={() => this.handleClick()}><img src={next} className="arrow" alt="next" /></NavLink>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ChoixRC from '../ChoixRC/index';
+import OrderSection from '../OrderSection/index';
 
 class Home extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <ChoixRC />
+        <OrderSection />
       </div>
     );
   }
