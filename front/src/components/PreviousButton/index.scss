@@ -1,0 +1,17 @@
+.previous {
+    background-color: #102643;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 55px;
+    padding-right: 45px;
+    display:flex;
+    align-items: center;
+    .arrow {
+        height: 40px
+    }
+
+    &:hover {
+        background-color: #0a192c;
+    }
+}

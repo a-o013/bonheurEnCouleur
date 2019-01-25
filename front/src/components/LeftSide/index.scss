@@ -1,0 +1,13 @@
+.left-container {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .left-container {
+        background-color: white;
+        width: 500px;
+        height: calc(100vh - 70px);
+        z-index: 0;
+        display: block;
+    }
+}
