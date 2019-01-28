@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Concept from './components/Concept/index';
 
 const App = () => (

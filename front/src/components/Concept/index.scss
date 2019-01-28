@@ -11,14 +11,15 @@
     color: $color;
     margin: 0px;
     position: relative;
+    font-family: "MoonFlowerBold";
 }
 .section_title_text{
-    font-size: 7vw;
-    top: 1.7vh;
+    font-size: 9vw;
+    top: 4vw;
     z-index: 1;
 }
 .container_text_title{
-    font-size: 20px;
+    font-size: 24px;
 }
 .container_text_text{
     font-size: 16px;
@@ -29,6 +30,7 @@
     background-color: $background-color;
     padding: 5% 5% 5% 2%;
     line-height: 2em;
+    font-family: "Quicksand";
 }
 .section_title_1_text{
     @include section_title(#DDAD9F, 0px, relative)
@@ -67,32 +69,14 @@
   }
 
 @media screen and (min-width: 800px) {
-    .container_text_1{
+   .container_text_1{
         margin: 0%;
-        &_title{
-            font-size: 20px;
-        }
-        &_text{
-            font-size: 16px;
-        }
-    }
+   }
     .container_text_2{
         margin: 0%;
-        &_title{
-            font-size: 20px;
-        }
-        &_text{
-            font-size: 16px;
-        }
     }
     .container_text_3{
         margin: 0%;
-        &_title{
-            font-size: 20px;
-        }
-        &_text{
-            font-size: 16px;
-        }
     }
     .container-flex{
         display: flex;
@@ -121,13 +105,10 @@
     .section_title_2_text{
         text-align: right;
     }
-    .section_title_text{
-        top: 5vh;
-    }
-    .container_text_title{
+    /*.container_text_title{
         font-size: 24px;
     }
     .container_text_text{
         font-size: 20px;
-    }
+    }*/
   }
