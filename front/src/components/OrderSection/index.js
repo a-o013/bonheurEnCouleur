@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 class OrderSection extends Component {
@@ -13,14 +14,18 @@ class OrderSection extends Component {
     return (
       <div>
         <div>
-          <NavLink to="/calendrier/1">Calendrier</NavLink>
+          <NavLink to="/calendrier/1" onClick={this.props.nextStep}>Calendrier</NavLink>
         </div>
         <div>
-          <NavLink to="/recharge/1">Recharge</NavLink>
+          <NavLink to="/recharge/1" onClick={this.props.nextStep}>Recharge</NavLink>
         </div>
       </div>
     );
   }
 }
 
-export default OrderSection;
+const mapDispatchToProps = dispatch => ({
+  nextStep: () => dispatch({ type: 'NEXTSTEP' }),
+});
+
+export default connect(null, mapDispatchToProps)(OrderSection);
