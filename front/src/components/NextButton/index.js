@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { nextStep } from '../../actions/actions';
 import next from '../../assets/images/arrow-right.svg';
 
 class NextButton extends Component {
@@ -26,8 +28,8 @@ const mapStateToProps = state => ({
   step: state.step,
 });
 
-const mapDispatchToProps = dispatch => ({
-  nextStep: () => dispatch({ type: 'NEXTSTEP' }),
-});
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ nextStep }, dispatch)
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(NextButton);

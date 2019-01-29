@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { nextStep } from '../../actions/actions';
 
 class OrderSection extends Component {
   constructor(props) {
@@ -24,8 +26,8 @@ class OrderSection extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  nextStep: () => dispatch({ type: 'NEXTSTEP' }),
-});
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ nextStep }, dispatch)
+);
 
 export default connect(null, mapDispatchToProps)(OrderSection);
