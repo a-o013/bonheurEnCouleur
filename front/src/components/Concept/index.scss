@@ -1,3 +1,6 @@
+body{
+    font-family: "Quicksand";
+}
 .img1{
     width: 100%;
     height: auto;
@@ -7,15 +10,9 @@
     flex-direction: column;
     margin: 2% 0%;
 }
-@mixin section_title($color, $margin, $position){
-    color: $color;
-    margin: 0px;
-    position: relative;
-    font-family: "MoonFlowerBold";
-}
 .section_title_text{
-    font-size: 9vw;
-    top: 4vw;
+    font-size: 4em;
+    top: 20px;
     z-index: 1;
 }
 .container_text_title{
@@ -30,22 +27,30 @@
     background-color: $background-color;
     padding: 5% 5% 5% 2%;
     line-height: 2em;
-    font-family: "Quicksand";
+}
+%section_title_text{
+    margin: 0px;
+    position: relative;
+    font-family: "MoonFlowerBold";
 }
 .section_title_1_text{
-    @include section_title(#DDAD9F, 0px, relative)
+    color: #DDAD9F;
+    @extend %section_title_text;
 }
 .container_text_1{
     @include container_text(#102643, #F6F2F1);
 }
 .section_title_2_text{
-    @include section_title(#BB5E51, 0px, relative)
+    color: #BB5E51;
+    @extend %section_title_text;
 }
 .container_text_2{
     @include container_text(#102643, #DDAD9F);
 }
 .section_title_3_text{
-    @include section_title(#A1B2B0, 0px, relative)
+    color: #A1B2B0;
+    @extend %section_title_text;
+    
 }
 .container_text_3{
     @include container_text(#102643, #CFE3E1);
@@ -105,10 +110,4 @@
     .section_title_2_text{
         text-align: right;
     }
-    /*.container_text_title{
-        font-size: 24px;
-    }
-    .container_text_text{
-        font-size: 20px;
-    }*/
   }
