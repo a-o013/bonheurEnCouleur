@@ -1,0 +1,22 @@
+.card{
+    height: 600px;
+    width: 300px;
+    background-color:#FFFFFF;
+    margin: 40px;
+    padding: 10px;
+    
+}
+.caard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //transform: translate(0,-50%);
+    //margin-top: 50vh;
+    background-color: #F6F2F1;
+}
+.borderr{
+    border: 3px solid #DDAD9F;
+    height: 500px;
+    width: 400px;
+    margin: 10%;
+}
