@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './indexx.scss';
+import './index.scss';
 import { NavLink } from 'react-router-dom';
 import calendrier from '../../assets/images/calendrier.png';
 import recharge from '../../assets/images/recharge.png';
