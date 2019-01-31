@@ -1,15 +1,15 @@
 .images{
     height: 80px;
     width: 80px;
+    background-color: #FFFFFF;
+    display: block;
+    
 }
 .container_liste{
-    width: 365px;
-    height: 248px;
-    border-color: #F5F5F5;
-    border-style: solid;
-    border-width: 30px 30px;
-    padding: 0px;
-    margin: 0px;
+    background-color: #F5F5F5;
+    height: 33%;
+    width: 33%;
+    padding: 2%;
 }
 .scroll_liste {
     height: 248px;
@@ -27,12 +27,9 @@
   .liste{
     padding: 0px;
     margin: 0px;
-    border-color: #F5F5F5;
-    border-style: solid;
-    border-width: 0px 30px 0px 0px;
-    overflow: -webkit-paged-y;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: center;
 }
