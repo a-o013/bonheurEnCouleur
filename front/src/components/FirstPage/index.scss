@@ -1,0 +1,32 @@
+.logo1{
+    height: 10%;
+    width: 10%;
+    position: relative;
+    top:200px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    background-color: #CFE3E1;
+    padding: 0% 10%;
+    font-family: "MoonFlowerBold";
+    font-size: 30px;
+    font-weight: bold;
+    color: #102643;
+    position: relative;
+    top: 270px;
+    &_p{
+        margin: 0;
+    }
+}
+.fond{
+    background-image: url('../../assets/images/Fond2.png');
+    background-size: cover;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+}
