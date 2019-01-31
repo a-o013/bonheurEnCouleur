@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { previousStep } from '../../actions/actions';
 import previous from '../../assets/images/arrow-left.svg';
 
 class PreviousButton extends Component {
@@ -11,8 +14,8 @@ class PreviousButton extends Component {
   }
 
   navigateBack() {
-    this.props.previous();
     this.props.history.goBack();
+    this.props.previousStep();
   }
 
   render() {
@@ -22,4 +25,8 @@ class PreviousButton extends Component {
   }
 }
 
-export default withRouter(PreviousButton);
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ previousStep }, dispatch)
+);
+
+export default withRouter(connect(null, mapDispatchToProps)(PreviousButton));
