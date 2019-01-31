@@ -114,8 +114,8 @@ class ListeCouleurs extends Component {
     return (
       <div className="container_liste">
         <div className="scroll_liste scroll_liste_details">
-          <ul className="liste ">
-            <li className="liste_li">{listeCouleurs}</li>
+          <ul className="liste">
+            {listeCouleurs}
           </ul>
         </div>
       </div>
