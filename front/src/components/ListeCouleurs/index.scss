@@ -1,0 +1,35 @@
+.images{
+    height: 80px;
+    width: 80px;
+    background-color: #FFFFFF;
+    display: block;
+    
+}
+.container_liste{
+    background-color: #F5F5F5;
+    height: 33%;
+    width: 33%;
+    padding: 2%;
+}
+.scroll_liste {
+    height: 248px;
+    overflow: auto;
+}
+.scroll_liste_details::-webkit-scrollbar {
+    width: 15px;
+    &-thumb {
+    background: #102643;
+    border-radius: 5px 5px;
+    }&-track {
+    background: #FFFFFF;
+    }
+}
+  .liste{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
