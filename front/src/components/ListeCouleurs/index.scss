@@ -7,12 +7,13 @@
 }
 .container_liste{
     background-color: #F5F5F5;
-    height: 33%;
-    width: 33%;
-    padding: 2%;
+    height: auto;
+    width: 80%;
+    padding: 3%;
+    margin: auto;
 }
 .scroll_liste {
-    height: 248px;
+    height: 240px;
     overflow: auto;
 }
 .scroll_liste_details::-webkit-scrollbar {
