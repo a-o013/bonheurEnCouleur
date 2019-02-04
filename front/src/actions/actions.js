@@ -5,3 +5,8 @@ export const nextStep = () => ({
 export const previousStep = () => ({
   type: 'PREVIOUSSTEP',
 });
+
+export const selectColor = currentColor => ({
+  type: 'SELECTCOLOR',
+  payload: currentColor,
+});
