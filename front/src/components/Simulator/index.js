@@ -5,6 +5,8 @@ import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import plancheChoco from '../../assets/images/Planche_chocolat.png';
+import plancheGrise from '../../assets/images/Planche_grise.png';
 
 class Simulator extends Component {
   constructor(props) {
@@ -32,7 +34,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-            planche
+              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
             </div>
           </div>
         </div>
@@ -49,6 +52,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
+              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
               <MonthList />
             </div>
           </div>
@@ -65,6 +70,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
+              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
               <MonthList />
             </div>
           </div>

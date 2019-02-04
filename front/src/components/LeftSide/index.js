@@ -3,6 +3,7 @@ import './index.scss';
 import { withRouter } from 'react-router';
 import ModelsList from '../ModelsList/index';
 import ListeCouleurs from '../ListeCouleurs/index';
+import BtnPlanche from '../BtnPlanche/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -14,7 +15,9 @@ class LeftSide extends Component {
   render() {
     if (this.props.location.pathname === '/calendrier/1') {
       return (
-        <div className="left-container">Planches</div>
+        <div className="left-container">
+          <BtnPlanche />
+        </div>
       );
     }
     if (this.props.location.pathname === '/calendrier/2') {
