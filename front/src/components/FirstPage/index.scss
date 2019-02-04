@@ -1,11 +1,9 @@
 .logo1{
-    height: 25%;
-    width: 25%;
-    top:10vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    width: 20%;
     left: 40%;
+    position: absolute;
+    top:-9vw;
+    z-index: 1;
 }
 .text{
     display: flex;
@@ -13,11 +11,11 @@
     background-color: #CFE3E1;
     padding: 0% 2%;
     font-family: "MoonFlowerBold";
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: #102643;
     position: relative;
-    top: 20vh;
+    top: 90%;
     &_p{
         margin: 0;
         padding: 1% 0%;
@@ -29,28 +27,32 @@
     position: fixed;
     top:0;
     left: 0;
-    width: 100vw;
-    height: 20vh;
+    width: 100%;
+    height: 25%;
 }
 .logo2{
-    display:none;
+    display: none;
 }
 
 @media screen and (min-width: 500px) {
-    .logo1{
-        top:0px;
-        height:20%;
-        width:20%;
-    } 
+    .logo2{
+        display: block;
+        width: 40%;
+        left: 29%;
+        top:29%;
+        position: fixed;
+    }
 }
 
 @media screen and (min-width: 800px) {
-    .logo1{
-        top:0px;
-        height:15%;
-        width:15%;
+    .logo2{
+        display: block;
+        top:35%;
+        position: fixed;
     }
     .text{
-        font-size: 30px;
+        font-size: 28px;
+        padding: 0% 5%;
+        letter-spacing: 3px;
     }
 }

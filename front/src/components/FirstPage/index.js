@@ -16,11 +16,9 @@ class FirstPage extends Component {
         <div className="fond">
           <div className="text">
             <p className="text_p">Calendrier d’anniversaires</p>
-            <p className="text_p">100 % personalisable</p>
-          </div>
-          <div className="logo">
             <img src={logo1} alt="fond" className="logo1" />
             <img src={logo2} alt="fond" className="logo2" />
+            <p className="text_p">100 % personalisable</p>
           </div>
         </div>
       </div>
