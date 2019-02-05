@@ -42,7 +42,7 @@ class FlowerList extends Component {
     ));
     return (
       <li>
-        <ul>
+        <ul className="preview-flower-list">
           {flowers}
         </ul>
       </li>
