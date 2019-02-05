@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OrderSection from '../OrderSection/index';
+import Concept from '../Concept/index';
 
 class Home extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <Concept />
         <OrderSection />
       </div>
     );
