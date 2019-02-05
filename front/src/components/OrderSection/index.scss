@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100vh;
 }
 .card_holder {
-    height: 400px;
+    height: 300px;
     width: 300px;
     background-color: #FFFFFF;
-    margin: 2%;
     text-align: center;
     padding: 2%;
     &_border{
@@ -29,15 +29,25 @@
     }
 }
 .icone{
+    display: block;
     height: 50%;
-    width: auto;
     top: 20%;
     position: relative;
-    text-align: center;
-    padding: 5%;
+    margin: auto;
 }
 @media screen and (min-width: 700px) {
-    .card{
-        height: 100vh;
+    .card_holder {
+        height: 400px;
+        width: 300px;
+        margin: 2%;
+        padding: 2%;
+    }
+    .icone{
+        height: 50%;
+        width: auto;
+        top: 20%;
+        position: relative;
+        text-align: center;
+        padding: 5%;
     }
 }
