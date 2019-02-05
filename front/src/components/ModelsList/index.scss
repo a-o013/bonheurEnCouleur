@@ -1,0 +1,38 @@
+.models-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    .models-list {
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .model-item {
+            color: #102643;
+            font-size: 15px;
+            text-align: center;
+            position: relative;
+            height: 100px;
+            margin-top: 15px;
+        }
+        .image-model {
+            width: 90%;
+            
+        }
+        .model-step {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 110px;
+            margin: 0;
+        }
+    }
+    .arrow-container {
+        background-color: white;
+        border: none;
+        .arrow-blue {
+            height: 35px;
+        }
+    }
+}

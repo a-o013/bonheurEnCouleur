@@ -20,6 +20,7 @@ class LeftSide extends Component {
     if (this.props.location.pathname === '/calendrier/2') {
       return (
         <div className="left-container">
+          <p className="bold-item">1. Choisissez un package</p>
           <ModelsList />
           <ListeCouleurs />
         </div>
