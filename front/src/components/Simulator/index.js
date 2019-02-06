@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
@@ -8,11 +9,17 @@ import MonthList from '../MonthList/index';
 import plancheChoco from '../../assets/images/Planche_chocolat.png';
 import plancheGrise from '../../assets/images/Planche_grise.png';
 
+
+const mapStateToProps = state => ({
+  currentPlanche: state.currentPlanche,
+});
+
 class Simulator extends Component {
   constructor(props) {
     super(props);
     this.state = {
       section: '',
+
     };
   }
 
@@ -35,7 +42,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
-              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
             </div>
           </div>
         </div>
@@ -53,7 +60,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
-              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
             </div>
           </div>
@@ -71,7 +78,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
-              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator" />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
             </div>
           </div>
@@ -107,4 +114,4 @@ class Simulator extends Component {
   }
 }
 
-export default Simulator;
+export default connect(mapStateToProps)(Simulator);

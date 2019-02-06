@@ -17,12 +17,11 @@
           .planches_simulator{
               width: 700px;
               top: 70px;
+              position: absolute;
               &_grise{
-                  position: absolute;
                   z-index: 1;
               }
               &_choco{
-                  position: absolute;
                   z-index: 0;
               }
           }

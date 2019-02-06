@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+
 import plancheChoco from '../../assets/images/Planche_chocolat.png';
 import plancheGrise from '../../assets/images/Planche_grise.png';
 
@@ -9,6 +10,7 @@ class BtnPlanche extends Component {
     this.state = {
     };
   }
+
 
   render() {
     return (
@@ -20,7 +22,5 @@ class BtnPlanche extends Component {
     );
   }
 }
-
-// ajouter un onClick et liée avec le component qui va afficher la planche (display none)//
 
 export default BtnPlanche;
