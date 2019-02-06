@@ -12,17 +12,13 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <ul className="navbar_menu">
-          <li className="navbar_menu_welcome">
-            <img className="logomenu" src={Logomenu} alt="fleur logo" />
-          </li>
-          <li className="navbar_menu_welcome">
-            <a className="navbar_menu_welcome_link" href="#welcome" alt="welcome" title="Welcome">WELCOME</a>
-          </li>
-        </ul>
-        <ul className="navbar_menu">
-          <li className="navbar_menu_concept"><a href="#calendrier">Calendrier</a></li>
-          <li className="navbar_menu_concept navbar_menu_concept--padding"><a href="#concept">Concept</a></li>
+        <a className="navbar__link" href="#welcome">
+          <img className="navbar__link__image" src={Logomenu} alt="fleur logo" />
+          <p className="navbar__link__welcome">WELCOME</p>
+        </a>
+        <ul className="navbar__menu">
+          <li className="navbar__menu__item"><a className="navbar__menu__item__link" href="#calendrier">Calendrier</a></li>
+          <li className="navbar__menu__item"><a className="navbar__menu__item__link" href="#concept">Concept</a></li>
         </ul>
       </nav>
     );

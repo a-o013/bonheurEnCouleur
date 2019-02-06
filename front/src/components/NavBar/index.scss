@@ -1,65 +1,47 @@
 
 //SMARTPHONE
 .navbar { 
-	margin: 0;
-	padding: 0 1em;
-	overflow: hidden;
+	background-color: #F6F2F1;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #F6F2F1;
-		&_menu_welcome_link{
-			list-style: none;
-			text-decoration: none;
-			color: #DDAD9F;
-			font-size:30px;
-			font-family: "MoonFlowerBold";
-		}
-		&_menu_concept {
-			list-style: none;
-		}
-		&_menu_concept a{
-			color:#102643;
-			text-decoration: none;
-			font-size: 16px;
-			font-family: "Quicksand";
-		}
-		&_menu_welcome{
-			list-style: none;
-		}
-		&_menu_welcome img{
-			list-style: none;
-			padding-right: .5em;
-		}
-		&_menu{
-			padding: 0;
+	padding: 0 1em;
+	overflow: hidden;
+		&__link{
 			display: flex;
 			align-items: center;
-		}
-		&_menu_concept--padding{
-			padding-left: 0.5em;
-		}
-		
-}
+			text-decoration: none;
+			&__image{
+				display: block;
+				max-width: 40px;
+				margin-right: 10px;
+			}
+			&__welcome{
+				color: #DDAD9F;
+				font-size:30px;
+				font-family: "MoonFlowerBold";
+				margin: 0;
+			}
 
-.navbar_menu_concept a:hover {
-  color: #CFE3E1;
-}
-.logomenu{
-	width: 35px;
-	display: block;
-}
+		}
+		&__menu{
+			list-style: none;
+			padding: 0;
+			display: flex;
 
-//ORDINATEUR
-@media only screen and (min-width: 768px){
-	.navbar{
-		padding: 0 3em;
-	
-		&_menu_welcome img{
-			padding-right: .7em;
-		}
-		&_menu_concept--padding {
-			padding-left: 4em;
-		}
-	}
+			&__item{
+				&:not(:last-child){
+					margin-right: 10px;
+				}
+				&__link{
+					text-decoration: none;
+					color:#102643;
+					font-size: 16px;
+					font-family: "Quicksand";
+					&:hover{
+  					color: #CFE3E1;
+					}
+				}
+			}
+		}	
 }
