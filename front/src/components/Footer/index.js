@@ -10,12 +10,12 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="footer">
-        <ul>
-          <li className="footername"><img className="imageform" src="https://image.noelshack.com/fichiers/2019/06/2/1549385979-logo-fleur.png" alt="fleur logo" /></li>
-          <li className="footername nameform">Le Bonheur en couleurs</li>
-        </ul>
-      </div>
+      <footer className="footer">
+        <div className="footer__link">
+          <img className="footer__link__image" src="https://image.noelshack.com/fichiers/2019/06/2/1549385979-logo-fleur.png" alt="fleur logo" />
+          <p className="footer__link__bec">Le bonheur en couleurs</p>
+        </div>
+      </footer>
     );
   }
 }
