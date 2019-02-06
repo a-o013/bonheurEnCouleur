@@ -1,0 +1,23 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#CFE3E1;
+    color: #102643;
+    text-align: left;
+  }
+
+.footername
+    {
+        display : flex-start;
+        list-style-position:outside;
+        margin-right:25px;
+        list-style-type:none;
+        }
+
+
+.imageform{
+    width: 35px;
+    display: block;
+}
