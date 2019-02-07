@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.scss';
+import './indexx.scss';
 import logo1 from '../../assets/images/logo_fleur.png';
 import logo2 from '../../assets/images/logo_calendrier.png';
 
@@ -12,14 +12,16 @@ class FirstPage extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="fond">
-          <div className="text">
-            <p className="text_p">Calendrier d’anniversaires</p>
-            <img src={logo1} alt="fond" className="logo1" />
-            <img src={logo2} alt="fond" className="logo2" />
-            <p className="text_p">100 % personalisable</p>
+      <div>
+        <div className="background">
+          <div className="background__text">
+            <p className="background__text__p">Calendrier d’anniversaires</p>
+            <img src={logo1} alt="fleur" className="background__text__image" />
+            <p className="background__text__p">100 % personnalisable</p>
           </div>
+        </div>
+        <div className="container2">
+          <img src={logo2} alt="calendrier" className="container2__image" />
         </div>
       </div>
     );
