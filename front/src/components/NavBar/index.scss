@@ -1,0 +1,47 @@
+
+//SMARTPHONE
+.navbar { 
+	background-color: #F6F2F1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1em;
+	overflow: hidden;
+		&__link{
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			&__image{
+				display: block;
+				max-width: 40px;
+				margin-right: 10px;
+			}
+			&__welcome{
+				color: #DDAD9F;
+				font-size:30px;
+				font-family: "MoonFlowerBold";
+				margin: 0;
+			}
+
+		}
+		&__menu{
+			list-style: none;
+			padding: 0;
+			display: flex;
+
+			&__item{
+				&:not(:last-child){
+					margin-right: 10px;
+				}
+				&__link{
+					text-decoration: none;
+					color:#102643;
+					font-size: 16px;
+					font-family: "Quicksand";
+					&:hover{
+  					color: #CFE3E1;
+					}
+				}
+			}
+		}	
+}
