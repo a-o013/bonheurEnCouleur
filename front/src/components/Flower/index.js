@@ -6,8 +6,20 @@ class Flower extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      switch: 'empty-flower',
+      switch: this.props.flower,
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.flower !== this.props.flower) {
+      this.updateProps();
+    }
+  }
+
+  updateProps() {
+    this.setState({
+      switch: this.props.flower,
+    });
   }
 
   changeColor() {
