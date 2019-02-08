@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { withRouter } from 'react-router';
 import ModelsList from '../ModelsList/index';
+import ListeCouleurs from '../ListeCouleurs/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class LeftSide extends Component {
       return (
         <div className="left-container">
           <ModelsList />
+          <ListeCouleurs />
         </div>
       );
     }

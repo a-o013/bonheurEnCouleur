@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.scss';
-import FirstPage from './components/FirstPage/index';
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/index';
+import Simulator from './components/Simulator/index';
 
 const App = () => (
   <div className="App">
-    <FirstPage />
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/:section/:step" component={Simulator} />
+    </Switch>
   </div>
 );
 

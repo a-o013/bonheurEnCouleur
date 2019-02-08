@@ -1,40 +1,83 @@
-.logo1{
-    width: 20%;
-    left: 40%;
-    position: absolute;
-    top:-9vw;
-    z-index: 1;
-}
-.text{
-    display: flex;
-    justify-content: space-between;
-    background-color: #CFE3E1;
-    padding: 0% 2%;
-    font-family: "MoonFlowerBold";
-    font-size: 20px;
-    font-weight: bold;
-    color: #102643;
-    position: relative;
-    top: 90%;
-    &_p{
-        margin: 0;
-        padding: 1% 0%;
+
+.background{
+    background: linear-gradient(to bottom, transparent 0%, white 100%), url('../../assets/images/Fond1.png'); 
+    background-size: cover;
+    height:100vh ;
+    overflow: hidden;
+    &__text{
+        font-family: "MoonFlowerBold";
+        font-size: 17px;
+        font-weight: bold;
+        color: #102643;
+        display: flex;
+        justify-content: space-between;
+        background-color: #CFE3E1;
+        transform: rotate(10deg);
+        position: relative;
+        top: 25%;
+        width: 104vw;
+        box-sizing: border-box;
+        margin-left: -2vw;
+        &__p{
+            margin: 5%;
+        }
+        &__image{
+            width:30%;
+            position: absolute;
+            left:39%;
+            top: -50%;
+        }
     }
 }
-.fond{
-    background-image: url('../../assets/images/Fond2.png');
-    background-size: cover;
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 25%;
+.container2{
+    height:50vh;
+    text-align: center;
+    &__image{
+        width: 100%;
+    }
 }
 
-@media screen and (min-width: 800px) {
-    .text{
-        font-size: 28px;
-        padding: 0% 5%;
-        letter-spacing: 3px;
+@media screen and (min-width: 500px) {
+    .background{
+        &__text{
+            transform: rotate(-10deg);
+            top: 35%;
+            font-size: 27px;
+            &__image{
+                width:25%;
+                left:38%;
+                top: -44%;
+            }
+        }
+    }
+    .container2{
+        &__image{
+            width:80%;
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .background{
+        &__text{
+            font-size: 45px;
+            &__image{
+                top: -40;
+            }
+        }
+    }
+    .container2{
+        &__image{
+            width:60%;
+        }
+    }
+}
+
+@media screen and (min-width: 1445px) {
+    .container__fond{
+        &__text{
+            &__image{
+                width:400px;
+            }
+        }
     }
 }

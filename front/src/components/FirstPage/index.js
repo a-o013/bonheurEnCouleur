@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './indexx.scss';
+import './index.scss';
 import logo1 from '../../assets/images/logo_fleur.png';
 import logo2 from '../../assets/images/logo_calendrier.png';
 
