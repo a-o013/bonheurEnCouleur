@@ -10,7 +10,6 @@ class FormContainer extends React.Component {
   }
 
   handleSubmit = (values) => {
-    console.log('values', values);
     fetch('http://www.localhost:4000/api/envoiformulaire',
       {
         method: 'POST',

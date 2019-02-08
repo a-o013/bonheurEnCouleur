@@ -31,7 +31,6 @@ const validate = (values) => {
 };
 // fonction pour ne pas envoyer le formulaire tant que ça foire
 const warn = (values) => {
-  console.log('test', values);
   const warning = {};
   if (!values.nom_complet || !values.prenom_complet || !values.rue_livraison
     || !values.postcode_livraison || !values.commune_livraison || !values.email || !values.numtel) {
