@@ -13,7 +13,23 @@
         display: flex;
         .preview-container {
           margin: 0 auto;
-          margin-top: 100px;
+          width: 700px;
+          .planches_simulator{
+              transform: translate(-5%);
+              margin-left: 0;
+              width: 750px;
+              top: 60px;
+              position: absolute;
+              &_on {
+                  z-index: 1;
+              }
+              &_off{
+                  z-index: -1;
+              }
+              &_choco{
+                z-index: 0;
+              }
+          }
         }
     }
 }

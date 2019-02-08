@@ -4,6 +4,7 @@ const defaultState = {
   limit: 1,
   models: 'model1',
   amount: 30,
+  currentPlanche: 'on',
 };
 
 const Reducer = (state = defaultState, action) => {
@@ -68,6 +69,16 @@ const Reducer = (state = defaultState, action) => {
       return {
         ...state,
         amount: 60,
+      };
+    case 'SELECTGRAY':
+      return {
+        ...state,
+        currentPlanche: 'on',
+      };
+    case 'SELECTCHOCO':
+      return {
+        ...state,
+        currentPlanche: 'off',
       };
     default:
       return state;

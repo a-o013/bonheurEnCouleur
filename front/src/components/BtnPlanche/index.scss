@@ -1,0 +1,21 @@
+.container_btn_planches{
+    text-align: center;
+}
+.btn_planches_image{
+    width:90%;
+    margin: 2%;
+}
+.btn_planches{
+    padding: 0;
+    margin: 10%;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    outline: none;
+    cursor: pointer;
+}
+.selected {
+    border: 3px solid #102643;
+    border-radius: 5px;
+    margin: 5%
+}
