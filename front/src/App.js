@@ -6,7 +6,6 @@ import Simulator from './components/Simulator/index';
 
 const App = () => (
   <div className="App">
-    <header className="App-header" />
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/:section/:step" component={Simulator} />
