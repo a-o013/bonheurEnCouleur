@@ -18,11 +18,14 @@
               width: 700px;
               top: 70px;
               position: absolute;
-              &_grise{
+              &_on {
                   z-index: 1;
               }
+              &_off{
+                  z-index: -1;
+              }
               &_choco{
-                  z-index: 0;
+                z-index: 0;
               }
           }
         }

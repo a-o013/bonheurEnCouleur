@@ -41,7 +41,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
             </div>
           </div>
@@ -59,7 +59,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
             </div>
@@ -77,7 +77,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <img src={plancheGrise} alt="btn_planche_grise" className="planches_simulator planches_simulator_grise" />
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
             </div>

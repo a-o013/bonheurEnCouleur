@@ -1,6 +1,6 @@
 const defaultState = {
   step: 1,
-  currentPlanche: true,
+  currentPlanche: 'on',
 };
 
 
@@ -19,12 +19,12 @@ const Reducer = (state = defaultState, action) => {
     case 'SELECTGRAY':
       return {
         ...state,
-        currentPlanche: state.currentPlanche,
+        currentPlanche: 'on',
       };
     case 'SELECTCHOCO':
       return {
         ...state,
-        currentPlanche: state.currentPlanchefalse,
+        currentPlanche: 'off',
       };
     default:
       return state;
