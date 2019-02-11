@@ -5,20 +5,21 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 1em;
 	overflow: hidden;
+
 		&__link{
+			padding: 0 1em;
 			display: flex;
 			align-items: center;
 			text-decoration: none;
 			&__image{
 				display: block;
-				max-width: 40px;
+				max-width: 30px;
 				margin-right: 10px;
 			}
 			&__welcome{
 				color: #DDAD9F;
-				font-size:30px;
+				font-size:22px;
 				font-family: "MoonFlowerBold";
 				margin: 0;
 			}
@@ -26,7 +27,7 @@
 		}
 		&__menu{
 			list-style: none;
-			padding: 0;
+			padding: 0 1em;
 			display: flex;
 
 			&__item{
@@ -45,3 +46,18 @@
 			}
 		}	
 }
+
+.space{
+	height: 2000px;
+}
+//Tablette
+
+@media screen and (min-width:950px){
+	.navbar{
+		width: 100%;
+		position: fixed;
+	}
+}
+
+//web
+
