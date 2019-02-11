@@ -18,11 +18,11 @@ class AmountButton extends Component {
 
   render() {
     return (
-      <div>
-        <button type="button" onClick={this.props.to30}>30</button>
-        <button type="button" onClick={this.props.to40}>40</button>
-        <button type="button" onClick={this.props.to50}>50</button>
-        <button type="button" onClick={this.props.to60}>60</button>
+      <div className="amount-container">
+        <button className="amount-button" type="button" onClick={this.props.to30}>30</button>
+        <button className="amount-button" type="button" onClick={this.props.to40}>40</button>
+        <button className="amount-button" type="button" onClick={this.props.to50}>50</button>
+        <button className="amount-button" type="button" onClick={this.props.to60}>60</button>
       </div>
     );
   }
