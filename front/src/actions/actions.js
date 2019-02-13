@@ -34,3 +34,7 @@ export const to50 = () => ({
 export const to60 = () => ({
   type: 'TO60',
 });
+
+export const noModel = () => ({
+  type: 'NOMODEL',
+});

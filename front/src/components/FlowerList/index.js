@@ -5,21 +5,27 @@ import Flower from '../Flower/index';
 const table = [
   {
     key: 1,
+    img: 'empty-flower',
   },
   {
     key: 2,
+    img: 'empty-flower',
   },
   {
     key: 3,
+    img: 'empty-flower',
   },
   {
     key: 4,
+    img: 'empty-flower',
   },
   {
     key: 5,
+    img: 'empty-flower',
   },
   {
     key: 6,
+    img: 'empty-flower',
   },
 ];
 
@@ -32,7 +38,7 @@ class FlowerList extends Component {
 
   render() {
     const flowers = table.map(elem => (
-      <Flower key={elem.key} flower={this.props.column[elem.key - 1]} />
+      <Flower key={elem.key} flower={this.props.column[elem.key - 1]} clear={elem.img} />
     ));
     return (
       <li>

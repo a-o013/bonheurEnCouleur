@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
+import ReactTimeout from 'react-timeout';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { nextModel, previousModel } from '../../actions/actions';
+import { nextModel, previousModel, noModel } from '../../actions/actions';
 import next from '../../assets/images/arrow-right-blue.svg';
 import previous from '../../assets/images/arrow-left-blue.svg';
 import model1 from '../../assets/images/model1.png';
@@ -38,34 +39,7 @@ class ModelsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      limit: 1,
     };
-  }
-
-  nextModel() {
-    if (this.state.limit === 5) {
-      this.setState({
-        limit: 1,
-      });
-    } else {
-      this.setState(
-        prevState => ({ limit: prevState.limit + 1 }
-        ),
-      );
-    }
-  }
-
-  previousModel() {
-    if (this.state.limit === 1) {
-      this.setState({
-        limit: 5,
-      });
-    } else {
-      this.setState(
-        prevState => ({ limit: prevState.limit - 1 }
-        ),
-      );
-    }
   }
 
   render() {
@@ -92,7 +66,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ nextModel, previousModel }, dispatch)
+  bindActionCreators({ nextModel, previousModel, noModel }, dispatch)
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(ModelsList);
+export default ReactTimeout(connect(mapStateToProps, mapDispatchToProps)(ModelsList));

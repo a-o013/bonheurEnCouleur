@@ -4,6 +4,7 @@ const defaultState = {
   limit: 1,
   models: 'model1',
   amount: 30,
+  reboot: 'off',
 };
 
 const Reducer = (state = defaultState, action) => {
@@ -29,12 +30,14 @@ const Reducer = (state = defaultState, action) => {
           ...state,
           limit: 1,
           models: 'model1',
+          reboot: 'off',
         };
       }
       return {
         ...state,
         limit: state.limit + 1,
         models: `model${state.limit + 1}`,
+        reboot: 'off',
       };
     case 'PREVIOUSMODEL':
       if (state.limit === 1) {
@@ -42,12 +45,14 @@ const Reducer = (state = defaultState, action) => {
           ...state,
           limit: 5,
           models: 'model5',
+          reboot: 'off',
         };
       }
       return {
         ...state,
         limit: state.limit - 1,
         models: `model${state.limit - 1}`,
+        reboot: 'off',
       };
     case 'TO30':
       return {
@@ -68,6 +73,12 @@ const Reducer = (state = defaultState, action) => {
       return {
         ...state,
         amount: 60,
+      };
+    case 'NOMODEL':
+      return {
+        ...state,
+        models: 'model0',
+        reboot: 'on',
       };
     default:
       return state;

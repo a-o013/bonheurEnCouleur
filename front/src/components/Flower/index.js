@@ -10,15 +10,29 @@ class Flower extends Component {
     };
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.flower !== this.props.flower) {
+  componentDidUpdate(prevProps, prevState) {
+    console.log('update', prevProps, this.props)
+
+    if(prevState.switch !== this.state.switch && this.state.switch === 'empty-flower'){
+      this.updateState()
+    }
+    if(prevProps.flower !== this.props.flower){
+      this.clearState();
+    }
+    if (prevProps.reboot !== this.props.reboot && this.props.reboot === 'on') {
       this.updateProps();
     }
   }
 
-  updateProps() {
+  updateState() {
     this.setState({
       switch: this.props.flower,
+    });
+  }
+
+  clearState() {
+    this.setState({
+      switch: this.props.clear,
     });
   }
 
@@ -35,6 +49,7 @@ class Flower extends Component {
   }
 
   render() {
+    console.log('ok', this.props.flower);
     return (
       <li className="preview-item">
         <button className="preview-button" type="button" onClick={ev => this.changeColor(ev)}>
@@ -47,6 +62,7 @@ class Flower extends Component {
 
 const mapStateToProps = state => ({
   currentColor: state.currentColor,
+  reboot: state.reboot,
 });
 
 export default connect(mapStateToProps)(Flower);

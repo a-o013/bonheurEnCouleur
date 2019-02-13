@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { noModel } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
@@ -50,6 +53,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <MonthList />
+              <button className="clear-button" type="button" onClick={this.props.noModel}>Effacer le calendrier</button>
             </div>
           </div>
         </div>
@@ -100,4 +104,8 @@ class Simulator extends Component {
   }
 }
 
-export default Simulator;
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ noModel }, dispatch)
+);
+
+export default connect(null, mapDispatchToProps)(Simulator);
