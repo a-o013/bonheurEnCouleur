@@ -3,7 +3,7 @@ import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/index';
 import Simulator from './components/Simulator/index';
-import Facture from './components/Facture/index';
+import Facture from './components/Factureconvert/index';
 
 const App = () => (
   <div className="App">

@@ -33,41 +33,39 @@ class Facture extends Component {
 
         <div className="facture__tab">
           <table className="facture__tab__compteur">
-            <td>
-              <th>Désignation</th>
-              <tr> PLANCHE</tr>
-              <tr> FLEURS 43</tr>
-              <tr>FLEURS 3</tr>
-            </td>
-            <td>
-              <th>Quantité</th>
-              <tr>1</tr>
-              <tr>45</tr>
-              <tr>10</tr>
-            </td>
-            <td>
-              <th>Prix unitaire</th>
-              <tr>20€</tr>
-              <tr>1€</tr>
-              <tr>1€</tr>
-            </td>
-            <td>
-              <th>Prix total</th>
-              <tr>20€</tr>
-              <tr>45€</tr>
-              <tr>10€</tr>
-            </td>
+            <thead>
+              <tr>
+                <td>Désignation</td>
+                <td>Quantité</td>
+                <td>Prix unitaire</td>
+                <td>Prix total</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>fleur 1</td>
+                <td>50</td>
+                <td>1</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>planche</td>
+                <td>1</td>
+                <td>20</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>FLEUR 6 </td>
+                <td>3</td>
+                <td>1</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td colSpan="3"> TOTAL A PAYER :</td>
+                <td colSpan="1">73€</td>
+              </tr>
+            </tbody>
           </table>
-          <div>
-            <table className="facture__tab__total">
-              <td>
-                <th>TOTAL A PAYER</th>
-              </td>
-              <td>
-                <tr>75€</tr>
-              </td>
-            </table>
-          </div>
         </div>
 
         <div className="facture__validation">
