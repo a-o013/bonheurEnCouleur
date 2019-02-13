@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { popUpOff } from '../../actions/actions';
 import img1 from '../../assets/images/flowers/1.png';
 import img2 from '../../assets/images/flowers/2.png';
 import img3 from '../../assets/images/flowers/3.png';
@@ -98,6 +101,13 @@ const couleur = [{ img: img1, key: 1 },
   { img: img47, key: 47 },
   { img: img48, key: 48 }];
 
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ popUpOff }, dispatch)
+);
+
+const mapStateToProps = state => ({
+  popUpOff: state.popUp,
+});
 
 class ListeCouleurs extends Component {
   constructor(props) {
@@ -108,7 +118,11 @@ class ListeCouleurs extends Component {
 
   render() {
     const listeCouleurs = couleur.map(elem => (
-      <li key={elem.key}><img className="images" src={elem.img} alt="choix-couleurs" /></li>
+      <li key={elem.key}>
+        <button type="button" onClick={() => this.props.popUpOff()} className="btn_fleurs">
+          <img className="images" src={elem.img} alt="choix-couleurs" />
+        </button>
+      </li>
     ));
 
     return (
@@ -123,4 +137,4 @@ class ListeCouleurs extends Component {
   }
 }
 
-export default ListeCouleurs;
+export default connect(mapStateToProps, mapDispatchToProps)(ListeCouleurs);

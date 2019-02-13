@@ -1,0 +1,32 @@
+.popUp_btn {
+    display: block;
+    margin: 5px;
+    padding: 0;
+    width: 140px;
+    height: 40px;
+    border: 2px solid #DDAD9F;
+    border-radius: 40px;
+    color: #DDAD9F;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: "Quicksand";
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    background: transparent;
+}
+.popUp{
+    text-align: -webkit-center;
+}
+.popUp_btn:hover {
+    background-color: #DDAD9F;
+    color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+    .popUp_btn{
+        
+        &_mobile{
+            display: none;
+        }
+    }
+}

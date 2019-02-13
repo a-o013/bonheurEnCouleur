@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import ListeCouleurs from '../ListeCouleurs/index';
+import PopupBtns from '../PopupBtns/index';
+
+const mapStateToProps = state => ({
+  popUpColors: state.popUpColors,
+  popUpPackages: state.popUpPackages,
+});
 
 class Simulator extends Component {
   constructor(props) {
@@ -32,7 +40,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-            planche
+              planche
             </div>
           </div>
         </div>
@@ -50,6 +58,13 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <MonthList />
+              <PopupBtns />
+              <div className={`popUp__button_listeCouleurs_${this.props.popUpColors}`}>
+                <ListeCouleurs />
+              </div>
+              <div className={`popUp__button_packages_${this.props.popUpPackages}`}>
+                <MonthList />
+              </div>
             </div>
           </div>
         </div>
@@ -100,4 +115,4 @@ class Simulator extends Component {
   }
 }
 
-export default Simulator;
+export default connect(mapStateToProps)(Simulator);
