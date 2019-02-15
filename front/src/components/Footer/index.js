@@ -25,7 +25,7 @@ class Footer extends Component {
           </a>
         </div>
         <div className="footer__wcs">
-          <p className="footer__wcs__text">© 2019 - Made with ♡ by  </p>
+          <p className="footer__wcs__text">© 2019 - Made with ♡ by</p>
           <a href="https://wildcodeschool.be/"><img className="footer__wcs__image" src={logowcs} alt="logo wild code school" /></a>
         </div>
       </footer>
