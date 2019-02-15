@@ -21,7 +21,6 @@ class Simulator extends Component {
     this.setState({
       section: this.props.match.params.section,
     });
-    console.log(this.props.match.params.section)
     if (this.props.match.params.section === 'recharge') {
       this.props.delet();
     }
@@ -86,8 +85,8 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
             <NextButton section={this.state.section} />
-            </div>
-            <div className="main-container">
+          </div>
+          <div className="main-container">
             <LeftSide />
             <div className="preview-container">
               <MonthList />
