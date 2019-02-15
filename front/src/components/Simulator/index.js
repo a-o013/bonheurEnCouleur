@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { popUpOffColor, popUpOffPackage } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
@@ -8,11 +10,17 @@ import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
 import ListeCouleurs from '../ListeCouleurs/index';
 import PopupBtns from '../PopupBtns/index';
+import ModelsList from '../ModelsList';
+import AmountButton from '../AmountButton';
 
 const mapStateToProps = state => ({
   popUpColors: state.popUpColors,
   popUpPackages: state.popUpPackages,
 });
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ popUpOffColor, popUpOffPackage }, dispatch)
+);
 
 class Simulator extends Component {
   constructor(props) {
@@ -60,10 +68,15 @@ class Simulator extends Component {
               <MonthList />
               <PopupBtns />
               <div className={`popUp__button_listeCouleurs_${this.props.popUpColors}`}>
+                <button type="button" onClick={() => this.props.popUpOffColor()} className="close_btn">X</button>
                 <ListeCouleurs />
               </div>
               <div className={`popUp__button_packages_${this.props.popUpPackages}`}>
-                <MonthList />
+                <button type="button" onClick={() => this.props.popUpOffPackage()} className="close_btn">X</button>
+                <div className="popUp__button_packages_card">
+                  <AmountButton />
+                  <ModelsList />
+                </div>
               </div>
             </div>
           </div>
@@ -115,4 +128,4 @@ class Simulator extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Simulator);
+export default connect(mapStateToProps, mapDispatchToProps)(Simulator);

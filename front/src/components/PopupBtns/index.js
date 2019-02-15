@@ -18,9 +18,9 @@ class PopupBtns extends Component {
   render() {
     return (
       <div className="popUp">
-        <button type="button" className="popUp_btn">Reset</button>
         <button type="button" onClick={() => this.props.popUpPackage()} className="popUp_btn popUp_btn_mobile">Packages</button>
         <button type="button" onClick={() => this.props.popUpColors()} className="popUp_btn popUp_btn_mobile">Couleurs</button>
+        <button type="button" className="popUp_btn">Réinitialiser</button>
       </div>
     );
   }

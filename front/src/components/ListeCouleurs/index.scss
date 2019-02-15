@@ -6,9 +6,10 @@
 }
 .container_liste{
     background-color: #F5F5F5;
-    height: 33%;
-    width: 33%;
-    padding: 2%;
+    height: auto;
+    width: 300px;
+    padding: 3%;
+    margin: auto;
 }
 .scroll_liste {
     height: 248px;
@@ -32,10 +33,15 @@
     list-style: none;
     justify-content: center;
 }
-.btn_fleurs{
+.color-button {
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+.selected {
+    border: 3px solid #102643;
+    border-radius: 5px;
     padding: 0;
-    border-width: 0;
-    border-style: none;
-    border-color: transparent;
-    display: block;
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { popUpOff } from '../../actions/actions';
+import { popUpOffColor, selectColor } from '../../actions/actions';
 import img1 from '../../assets/images/flowers/1.png';
 import img2 from '../../assets/images/flowers/2.png';
 import img3 from '../../assets/images/flowers/3.png';
@@ -102,11 +102,12 @@ const couleur = [{ img: img1, key: 1 },
   { img: img48, key: 48 }];
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ popUpOff }, dispatch)
+  bindActionCreators({ selectColor, popUpOffColor }, dispatch)
 );
 
 const mapStateToProps = state => ({
-  popUpOff: state.popUp,
+  currentColor: state.currentColor,
+  popUpOffColor: state.popUp,
 });
 
 class ListeCouleurs extends Component {
@@ -116,10 +117,15 @@ class ListeCouleurs extends Component {
     };
   }
 
+  clickOn(elem) {
+    this.props.popUpOffColor();
+    this.props.selectColor(elem.key);
+  }
+
   render() {
     const listeCouleurs = couleur.map(elem => (
       <li key={elem.key}>
-        <button type="button" onClick={() => this.props.popUpOff()} className="btn_fleurs">
+        <button id={elem.key} className={`color-button ${(this.props.currentColor === elem.key ? 'selected' : '')}`} type="button" onClick={() => this.clickOn(elem)}>
           <img className="images" src={elem.img} alt="choix-couleurs" />
         </button>
       </li>
