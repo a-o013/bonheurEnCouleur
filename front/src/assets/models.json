@@ -1,48 +1,6 @@
 {
-    "model0": {
-        "30": {
-            "1": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "2": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "3": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "4": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "5": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "6": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "7": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "8": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "9": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "10": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "11": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "12": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"]
-        },
-        "40": {
-            "1": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "2": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "3": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "4": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "5": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "6": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "7": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "8": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "9": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "10": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "11": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "12": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"]
-        },
-        "50": {
-            "1": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "2": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "3": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "4": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "5": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "6": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "7": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "8": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "9": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "10": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "11": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
-            "12": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"]
-        },
-        "60": {
+    "default": {
+        "0":   {
             "1": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
             "2": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],
             "3": ["empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower", "empty-flower"],

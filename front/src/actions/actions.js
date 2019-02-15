@@ -35,6 +35,11 @@ export const to60 = () => ({
   type: 'TO60',
 });
 
-export const noModel = () => ({
-  type: 'NOMODEL',
+export const delet = () => ({
+  type: 'DELET',
+});
+
+export const changeColor = object => ({
+  type: 'CHANGECOLOR',
+  payload: object,
 });

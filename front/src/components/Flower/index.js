@@ -1,39 +1,14 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { changeColor } from '../../actions/actions';
 
 class Flower extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      switch: this.props.flower,
     };
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log('update', prevProps, this.props)
-
-    if(prevState.switch !== this.state.switch && this.state.switch === 'empty-flower'){
-      this.updateState()
-    }
-    if(prevProps.flower !== this.props.flower){
-      this.clearState();
-    }
-    if (prevProps.reboot !== this.props.reboot && this.props.reboot === 'on') {
-      this.updateProps();
-    }
-  }
-
-  updateState() {
-    this.setState({
-      switch: this.props.flower,
-    });
-  }
-
-  clearState() {
-    this.setState({
-      switch: this.props.clear,
-    });
   }
 
   changeColor() {
@@ -49,11 +24,10 @@ class Flower extends Component {
   }
 
   render() {
-    console.log('ok', this.props.flower);
     return (
       <li className="preview-item">
-        <button className="preview-button" type="button" onClick={ev => this.changeColor(ev)}>
-          <img className="preview-image" src={`http://localhost:3000/flowers/${this.state.switch}.png`} alt="" />
+        <button className="preview-button" type="button" onClick={() => this.props.changeColor({ column: this.props.column, flower: this.props.flower })}>
+          <img className="preview-image" src={`http://localhost:3000/flowers/${this.props.currentPreview[this.props.column][this.props.flower - 1]}.png`} alt="" />
         </button>
       </li>
     );
@@ -62,7 +36,13 @@ class Flower extends Component {
 
 const mapStateToProps = state => ({
   currentColor: state.currentColor,
-  reboot: state.reboot,
+  amount: state.amount,
+  currentPreview: state.currentPreview,
 });
 
-export default connect(mapStateToProps)(Flower);
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ changeColor }, dispatch)
+);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Flower);

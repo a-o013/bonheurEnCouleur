@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { connect } from 'react-redux';
 import FlowerList from '../FlowerList/index';
-import data from '../../assets/models.json';
 
 const table = [
   {
@@ -52,7 +50,7 @@ class MonthList extends Component {
 
   render() {
     const months = table.map(elem => (
-      <FlowerList column={data[this.props.models][this.props.amount][elem.key]} key={elem.key} />
+      <FlowerList column={elem.key} />
     ));
     return (
       <ul className="month-list">
@@ -62,9 +60,4 @@ class MonthList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  models: state.models,
-  amount: state.amount,
-});
-
-export default connect(mapStateToProps)(MonthList);
+export default MonthList;

@@ -3,7 +3,7 @@ import './index.scss';
 import ReactTimeout from 'react-timeout';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { nextModel, previousModel, noModel } from '../../actions/actions';
+import { nextModel, previousModel } from '../../actions/actions';
 import next from '../../assets/images/arrow-right-blue.svg';
 import previous from '../../assets/images/arrow-left-blue.svg';
 import model1 from '../../assets/images/model1.png';
@@ -66,7 +66,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ nextModel, previousModel, noModel }, dispatch)
+  bindActionCreators({ nextModel, previousModel }, dispatch)
 );
 
 export default ReactTimeout(connect(mapStateToProps, mapDispatchToProps)(ModelsList));
