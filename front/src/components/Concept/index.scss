@@ -4,6 +4,7 @@ body{
 .img1{
     width: 100%;
     height: auto;
+    
 }
 .section_container{
     display: flex;
@@ -11,12 +12,10 @@ body{
     margin: 2% 0%;
 }
 .section_title_text{
-    font-size: 4em;
+    font-size: 50px;
     top: 20px;
     z-index: 1;
-}
-.container_text_title{
-    font-size: 24px;
+    padding-left: 10px;
 }
 .container_text_text{
     font-size: 16px;
@@ -71,11 +70,20 @@ body{
         width: 100%;
         height: auto;
     }
+    .section_title_text{
+        font-size: 55px;
+        top: 25px;
+    }
+    .container_text_text{
+        font-size: 18px;
+    }
   }
 
 @media screen and (min-width: 800px) {
    .container_text_1{
-        margin: 0%;
+        padding: 5% 5% 10% 2%;
+        height: 90%;
+        margin: 0;
    }
     .container_text_2{
         margin: 0%;
@@ -100,14 +108,20 @@ body{
     }
    
     .container_text_2{
-        margin: 0% 0% 10% 0%;
+        margin: 0% 0% 0% 0%;
     }
     .img2{
         padding: 0% 10% 0% 0%;
-        margin-bottom: auto;
-        margin-top: auto;
+        margin: 0;
     }
     .section_title_2_text{
         text-align: right;
+    }
+    .container_text_text{
+        font-size: 20px;
+    }
+    .section_title_text{
+        font-size: 70px;
+        top: 35px;
     }
   }

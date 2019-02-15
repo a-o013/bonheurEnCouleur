@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './index.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import img1 from '../../assets/images/concept/img1.png';
-import img2 from '../../assets/images/concept/img2.png';
+import img1 from '../../assets/images/concept/Comment_2.png';
+import img2 from '../../assets/images/concept/Comment_3.png';
 import img3 from '../../assets/images/concept/img3.png';
 
 
@@ -24,19 +24,20 @@ class Concept extends Component {
     return (
       <div>
         <section className="section_container">
-          <div>
-            <h2 className="section_title_1_text section_title_text">1. Lorem ipsum dolor</h2>
+          <div className="container_concept">
+            <h2 className="section_title_1_text section_title_text">C’est quoi ?</h2>
           </div>
           <div className="container-flex" data-aos="fade-right">
             <div className="container_text_1">
-              <h3 className="container_text_title">Lorem ipsum dolor</h3>
               <p className="container_text_text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
-                Nunc nec elit et velr adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
+                Des calendriers d’anniversaires
+                <ul>
+                  <li>décoratifs et originaux</li>
+                  <li>
+                    100% personnalisables pour s’associer au mieux à votre décoration intérieure
+                  </li>
+                  <li>fabriqués main en Belgique</li>
+                </ul>
               </p>
             </div>
             <img className="img1" src={img1} alt="imgconcept" data-aos="fade-left" />
@@ -45,18 +46,22 @@ class Concept extends Component {
 
         <section className="section_container">
           <div>
-            <h2 className="section_title_2_text section_title_text">2. Lorem ipsum dolor</h2>
+            <h2 className="section_title_2_text section_title_text">Comment cela fonctionne ?</h2>
           </div>
           <div className="container-flex_2" data-aos="fade-left">
             <div className="container_text_2">
-              <h3 className="container_text_title">Lorem ipsum dolor</h3>
               <p className="container_text_text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
-                Nunc nec elit et velr adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
+                Le calendrier se compose d’une planche sous laquelle sont disposés 12 crochets
+                (un par mois de l’année).
+              </p>
+              <p className="container_text_text">
+                Sous les crochets vous pouvez accrocher plusieurs pastilles en bois en
+                forme de fleur, sur lesquelles sont collées du papier coloré et à motifs.
+                Sur l’avant de la pastille vous pouvez écrire le prénom et le jour du mois
+                à laquelle la personne est née.
+              </p>
+              <p className="container_text_text">
+                Et sur l’arrière vous pouvez écrire l’année de naissance de la personne.
               </p>
             </div>
             <img className="img1 img2" src={img2} alt="imgconcept" data-aos="fade-right" />
@@ -65,18 +70,26 @@ class Concept extends Component {
 
         <section className="section_container">
           <div>
-            <h2 className="section_title_3_text section_title_text">3. Lorem ipsum dolor</h2>
+            <h2 className="section_title_3_text section_title_text">Comment commander ?</h2>
           </div>
           <div className="container-flex" data-aos="fade-right">
             <div className="container_text_3">
-              <h3 className="container_text_title">Lorem ipsum dolor</h3>
               <p className="container_text_text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
-                Nunc nec elit et velr adipiscing elit.
-                Duis ex lacus, porta vel dui non, volutpat imperdiet urna.
-                Donec porta euismod nibh vel interdum. Nulla at arcu in ligula ultricies viverra.
+                Avec le simulateur ci-dessous vous pouvez créez votre propre calendrier en
+                quelques étapes seulement :
+                <ol>
+                  <li>{`Choisissez la couleur de votre planche ${'"Birthdays"'} (gris ou chocolat).`}</li>
+                  <li>Choisissez le nombre de fleurs que vous souhaitez commander.</li>
+                  <li>
+                    Choisissez le ton de couleurs de fleurs que vous souhaitez
+                    (mauve, rose, rouge, orange, ou turquoise).
+                  </li>
+                  <li>
+                    Si la combinaison proposée ne vous convient pas,
+                    choisissez vous mêmes les fleurs que vous souhaitez pour votre calendrier,
+                    parmi une palette de 48 motifs.
+                  </li>
+                </ol>
               </p>
             </div>
             <img className="img1" src={img3} alt="imgconcept" data-aos="fade-left" />
