@@ -36,7 +36,9 @@ class LeftSide extends Component {
     }
     if (this.props.location.pathname === '/recharge/1') {
       return (
-        <div className="left-container">Couleurs</div>
+        <div className="left-container">
+          <ListeCouleurs />
+        </div>
       );
     }
     if (this.props.location.pathname === '/recharge/2') {

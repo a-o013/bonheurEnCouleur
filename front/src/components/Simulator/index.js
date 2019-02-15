@@ -21,6 +21,10 @@ class Simulator extends Component {
     this.setState({
       section: this.props.match.params.section,
     });
+    console.log(this.props.match.params.section)
+    if (this.props.match.params.section === 'recharge') {
+      this.props.delet();
+    }
   }
 
   render() {
@@ -82,8 +86,14 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
             <NextButton section={this.state.section} />
+            </div>
+            <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <MonthList />
+              <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
+            </div>
           </div>
-          <LeftSide />
         </div>
       );
     }
@@ -94,7 +104,12 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <MonthList />
+            </div>
+          </div>
         </div>
       );
     }
