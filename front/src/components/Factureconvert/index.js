@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { PropTypes } from 'prop-types';
 import html2canvas from 'html2canvas';
-import { jsPDF } from 'jspdf';
+import JsPdf from 'jspdf';
 import Facture from '../Facture/index';
 import './convert.scss';
 
@@ -21,9 +21,9 @@ export default class Export extends Component {
     html2canvas(this.toPrint)
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
-        const pdf = new { jsPDF }();
-        pdf.addImage(imgData, 'JPEG', 0, 0);
-        pdf.output('dataurlnewwindow');
+        console.log(imgData, canvas.width);
+        const pdf = new JsPdf();
+        pdf.addImage(imgData, 'PNG', 0, 0, 210, 297);
         pdf.save('facture.pdf');
       });
   }
@@ -31,12 +31,11 @@ export default class Export extends Component {
   render() {
     return (
       <div>
-        <div ref={(el) => { this.toPrint = el; }} className="mt4">
-          <div>FACTURE</div>
+        <div ref={(el) => { this.toPrint = el; }} className="canvas-container">
           <Facture />
-          <div className="mb5">
-            <button type="button" onClick={this.printDocument}>Print</button>
-          </div>
+        </div>
+        <div className="button-container">
+          <button type="button" onClick={() => this.printDocument()}>Print</button>
         </div>
       </div>
     );

@@ -71,7 +71,7 @@ class Facture extends Component {
         <div className="facture__validation">
           <p className="facture__validation__title">Critères de validation :</p>
           <p className="facture__validation__corps">
-            Le virement est a effectué sur le compte BEXX XXXX XXXX XXXX dés reception
+            Le virement est a effectué sur le compte BEXX XXXX XXXX XXXX dès réception
             de cet e-mail.
             <br />
             Bonheur en couleurs vous enverra ensuite votre calendrier personnalisé à l
