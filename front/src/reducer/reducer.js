@@ -55,25 +55,25 @@ const Reducer = (state = defaultState, action) => {
       return {
         ...state,
         amount: 30,
-        currentPreview: data.model1[30],
+        currentPreview: data[`model${state.limit}`][30],
       };
     case 'TO40':
       return {
         ...state,
         amount: 40,
-        currentPreview: data.model1[40],
+        currentPreview: data[`model${state.limit}`][40],
       };
     case 'TO50':
       return {
         ...state,
         amount: 50,
-        currentPreview: data.model1[50],
+        currentPreview: data[`model${state.limit}`][50],
       };
     case 'TO60':
       return {
         ...state,
         amount: 60,
-        currentPreview: data.model1[60],
+        currentPreview: data[`model${state.limit}`][60],
       };
     case 'DELET':
       return {
