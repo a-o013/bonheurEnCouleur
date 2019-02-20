@@ -19,8 +19,18 @@ class FormContainer extends React.Component {
         }),
         body: JSON.stringify(values),
       });
-    /* .then(res => res.json())
-    .then(data => ) */
+
+    fetch('http://www.localhost:4000/mailconfirm', {
+      method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+      body: JSON.stringify(values),
+    });
+  }
+
+  changePage() {
+    this.props.history.push('/');
   }
 
   render() {
