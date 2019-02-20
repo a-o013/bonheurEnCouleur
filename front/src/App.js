@@ -10,6 +10,7 @@ const App = () => (
       <Route path="/" component={Home} exact />
       <Route path="/:section/:step" component={Simulator} />
     </Switch>
+
   </div>
 );
 

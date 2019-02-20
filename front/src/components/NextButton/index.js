@@ -25,7 +25,7 @@ class NextButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  step: state.step,
+  step: state.reducer.step,
 });
 
 const mapDispatchToProps = dispatch => (

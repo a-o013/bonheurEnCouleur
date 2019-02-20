@@ -131,7 +131,7 @@ class ListeCouleurs extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentColor: state.currentColor,
+  currentColor: state.reducer.currentColor,
 });
 
 const mapDispatchToProps = dispatch => (

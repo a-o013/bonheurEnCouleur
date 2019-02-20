@@ -8,7 +8,7 @@ const defaultState = {
   currentPreview: data.model1[30],
 };
 
-const Reducer = (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'NEXTSTEP':
       return {
@@ -109,4 +109,4 @@ const Reducer = (state = defaultState, action) => {
   }
 };
 
-export default Reducer;
+export default reducer;

@@ -6,14 +6,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore } from "redux";
+import { createStore, combineReducers } from 'redux';
 import { Provider } from "react-redux";
-import Reducer from './reducer/reducer';
+import { reducer as reduxFormReducer } from 'redux-form';
+import reducer from './reducer/reducer';
 
 const store = createStore(
-    Reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+    combineReducers({
+        reduxFormReducer, // mounted under "form"
+        reducer,
+      }),
+      window.__REDUX_DEVTOOLS_EXTENSION__&& window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
     <Provider store={store}>
