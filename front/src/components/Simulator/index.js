@@ -11,26 +11,13 @@ class Simulator extends Component {
     super(props);
     this.state = {
       section: '',
-      step: 2,
     };
   }
 
   componentDidMount() {
     this.setState({
-      section: this.props.location.pathname.substring(0, this.props.location.pathname.length - 1),
+      section: this.props.match.params.section,
     });
-  }
-
-  next() {
-    this.setState(prevState => ({
-      step: prevState.step + 1,
-    }));
-  }
-
-  previous() {
-    this.setState(prevState => ({
-      step: prevState.step - 1,
-    }));
   }
 
   render() {
@@ -39,12 +26,8 @@ class Simulator extends Component {
         <div className="simulator-container">
           <div className="step-container">
             <StepBar />
-            <PreviousButton previous={() => this.previous()} />
-            <NextButton
-              next={() => this.next()}
-              step={this.state.step}
-              section={this.state.section}
-            />
+            <PreviousButton />
+            <NextButton section={this.state.section} />
           </div>
           <div className="main-container">
             <LeftSide />
@@ -60,12 +43,8 @@ class Simulator extends Component {
         <div className="simulator-container">
           <div className="step-container">
             <StepBar />
-            <PreviousButton previous={() => this.previous()} />
-            <NextButton
-              next={() => this.next()}
-              step={this.state.step}
-              section={this.state.section}
-            />
+            <PreviousButton />
+            <NextButton section={this.state.section} />
           </div>
           <div className="main-container">
             <LeftSide />
@@ -81,7 +60,7 @@ class Simulator extends Component {
         <div className="simulator-container">
           <div className="step-container">
             <StepBar />
-            <PreviousButton previous={() => this.previous()} />
+            <PreviousButton />
           </div>
           <div className="main-container">
             <LeftSide />
@@ -97,12 +76,8 @@ class Simulator extends Component {
         <div className="simulator-container">
           <div className="step-container">
             <StepBar />
-            <PreviousButton previous={() => this.previous()} />
-            <NextButton
-              next={() => this.next()}
-              step={this.state.step}
-              section={this.state.section}
-            />
+            <PreviousButton />
+            <NextButton section={this.state.section} />
           </div>
           <LeftSide />
         </div>
@@ -113,7 +88,7 @@ class Simulator extends Component {
         <div className="simulator-container">
           <div className="step-container">
             <StepBar />
-            <PreviousButton previous={() => this.previous()} />
+            <PreviousButton />
           </div>
           <LeftSide />
         </div>

@@ -1,21 +1,26 @@
 /* eslint-disable */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+
 import {createStore, combineReducers } from "redux";
 import {Provider} from "react-redux";
 import { reducer as reduxFormReducer } from 'redux-form';
+import Reducer from './reducer/reducer';
+
 
 const reducer = combineReducers({
-    form: reduxFormReducer, // mounted under "form"
-  });
-  const store = (window.devToolsExtension
-    ? window.devToolsExtension()(createStore)
-    : createStore)(reducer);
+  form:reduxFormReducer,
+  Reducer
+});
+
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { nextStep } from '../../actions/actions';
 
 class OrderSection extends Component {
   constructor(props) {
@@ -13,14 +16,18 @@ class OrderSection extends Component {
     return (
       <div>
         <div>
-          <NavLink to="/calendrier/1">Calendrier</NavLink>
+          <NavLink to="/calendrier/1" onClick={this.props.nextStep}>Calendrier</NavLink>
         </div>
         <div>
-          <NavLink to="/recharge/1">Recharge</NavLink>
+          <NavLink to="/recharge/1" onClick={this.props.nextStep}>Recharge</NavLink>
         </div>
       </div>
     );
   }
 }
 
-export default OrderSection;
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ nextStep }, dispatch)
+);
+
+export default connect(null, mapDispatchToProps)(OrderSection);

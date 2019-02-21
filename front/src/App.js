@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import Simulator from './components/Simulator/index';
+import './App.scss';
+import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/index';
 import FormContainer from './components/FormContainer';
+import Simulator from './components/Simulator/index';
 
 const App = () => (
   <div className="App">
