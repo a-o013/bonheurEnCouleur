@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/index';
-import FormContainer from './components/FormContainer';
 import Simulator from './components/Simulator/index';
 
 const App = () => (
@@ -10,7 +9,6 @@ const App = () => (
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/:section/:step" component={Simulator} />
-      <Route path="/formulaire" component={FormContainer} />
     </Switch>
 
   </div>

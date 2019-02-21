@@ -72,7 +72,7 @@ const SimpleForm = (props) => {
           />
         </div>
 
-        <p>Adresse de livraison : </p>
+        <p className="titleform">Adresse de livraison : </p>
         <Field
           type="text"
           name="rue_livraison"
@@ -99,7 +99,7 @@ const SimpleForm = (props) => {
         />
       </div>
 
-      <p>Contact : </p>
+      <p className="titleform">Contact : </p>
       <div className="input-group">
         <Field
           type="email"
@@ -119,7 +119,7 @@ const SimpleForm = (props) => {
       </div>
 
 
-      <p>Société :</p>
+      <p className="titleform">Société :</p>
       <div className="input-group">
         <Field
           type="text"
@@ -139,13 +139,14 @@ const SimpleForm = (props) => {
       </div>
 
 
-      <p>Commentaires : </p>
+      <p className="titleform">Commentaires : </p>
       <Field
         type="textarea"
         name="commentaires"
         component="textarea"
         label="Commentaires"
         placeholder="Commentaires"
+        className="textareawidth"
       />
 
       <div className="form-data">
