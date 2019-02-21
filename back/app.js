@@ -36,6 +36,6 @@ app.post('/mailconfirm', function (req, res, next){
     )
 })
 
-let server = app.listen( process.env.PORT || 4000, function(){
+let server = app.listen( process.env.PORT || port, function(){
     console.log('Listening on port ' + server.address().port);
     });
