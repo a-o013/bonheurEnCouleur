@@ -6,7 +6,7 @@
     overflow: hidden;
     &__text{
         font-family: "MoonFlowerBold";
-        font-size: 17px;
+        font-size: 14px;
         font-weight: bold;
         color: #102643;
         display: flex;
@@ -29,13 +29,6 @@
         }
     }
 }
-.container2{
-    height:50vh;
-    text-align: center;
-    &__image{
-        width: 100%;
-    }
-}
 
 @media screen and (min-width: 500px) {
     .background{
@@ -50,11 +43,6 @@
             }
         }
     }
-    .container2{
-        &__image{
-            width:80%;
-        }
-    }
 }
 @media screen and (min-width: 1000px) {
     .background{
@@ -63,11 +51,6 @@
             &__image{
                 top: -40;
             }
-        }
-    }
-    .container2{
-        &__image{
-            width:60%;
         }
     }
 }
