@@ -58,7 +58,7 @@ class Concept extends Component {
                 Sous les crochets vous pouvez accrocher plusieurs pastilles en bois en
                 forme de fleur, sur lesquelles sont collées du papier coloré et à motifs.
                 Sur l’avant de la pastille vous pouvez écrire le prénom et le jour du mois
-                à laquelle la personne est née.
+                où la personne est née.
               </p>
               <p className="container_text_text">
                 Et sur l’arrière vous pouvez écrire l’année de naissance de la personne.
@@ -75,13 +75,13 @@ class Concept extends Component {
           <div className="container-flex" data-aos="fade-right">
             <div className="container_text_3">
               <p className="container_text_text">
-                Avec le simulateur ci-dessous vous pouvez créez votre propre calendrier en
+                Avec le simulateur ci-dessous vous pouvez créer votre propre calendrier en
                 quelques étapes seulement :
                 <ol>
                   <li>{`Choisissez la couleur de votre planche ${'"Birthdays"'} (gris ou chocolat).`}</li>
                   <li>Choisissez le nombre de fleurs que vous souhaitez commander.</li>
                   <li>
-                    Choisissez le ton de couleurs de fleurs que vous souhaitez
+                    Choisissez le ton de couleurs que vous souhaitez
                     (mauve, rose, rouge, orange, ou turquoise).
                   </li>
                   <li>
