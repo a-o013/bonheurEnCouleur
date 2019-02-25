@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './index.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import img1 from '../../assets/images/concept/Comment_2.png';
+import img1 from '../../assets/images/concept/Calendriers.jpg';
 import img2 from '../../assets/images/concept/Comment_3.png';
-import img3 from '../../assets/images/concept/img3.png';
+import img3 from '../../assets/images/concept/Comment_2.png';
 
 
 class Concept extends Component {
