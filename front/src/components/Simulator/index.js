@@ -8,6 +8,7 @@ import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import FlowerPack from '../FlowerPack/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -89,8 +90,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <MonthList />
-              <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
+              <FlowerPack />
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <MonthList />
+              zzz
             </div>
           </div>
         </div>

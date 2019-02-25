@@ -11,18 +11,6 @@ class Flower extends Component {
     };
   }
 
-  changeColor() {
-    if (this.state.switch === this.props.currentColor) {
-      this.setState({
-        switch: 'empty-flower',
-      });
-    } else {
-      this.setState({
-        switch: this.props.currentColor,
-      });
-    }
-  }
-
   render() {
     return (
       <li className="preview-item">

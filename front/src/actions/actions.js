@@ -43,3 +43,8 @@ export const changeColor = object => ({
   type: 'CHANGECOLOR',
   payload: object,
 });
+
+export const changeAmount = object => ({
+  type: 'CHANGEAMOUNT',
+  payload: object,
+});
