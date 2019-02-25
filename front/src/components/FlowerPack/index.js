@@ -110,7 +110,6 @@ class FlowerPack extends Component {
   }
 
   render() {
-    console.log(this.props.currentAmount, 'ok')
     const flowerPack = color.map(elem => (
       <li key={elem.key} className="flower-pack-item">
         <img className="flower-pack-image" src={elem.img} alt="" />
