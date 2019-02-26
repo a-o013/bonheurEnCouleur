@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { withRouter } from 'react-router';
 import ModelsList from '../ModelsList/index';
+import FormContainer from '../FormContainer/index';
 import ListeCouleurs from '../ListeCouleurs/index';
 
 class LeftSide extends Component {
@@ -27,7 +28,7 @@ class LeftSide extends Component {
     }
     if (this.props.location.pathname === '/calendrier/3') {
       return (
-        <div className="left-container">Formulaire</div>
+        <div className="left-container"><FormContainer /></div>
       );
     }
     if (this.props.location.pathname === '/recharge/1') {
@@ -37,7 +38,7 @@ class LeftSide extends Component {
     }
     if (this.props.location.pathname === '/recharge/2') {
       return (
-        <div className="left-container">Formulaire</div>
+        <div className="left-container"><FormContainer /></div>
       );
     }
     return (
