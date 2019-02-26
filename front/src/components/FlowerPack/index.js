@@ -127,7 +127,7 @@ class FlowerPack extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentAmount: state.currentAmount,
+  currentAmount: state.Reducer.currentAmount,
 });
 
 const mapDispatchToProps = dispatch => (

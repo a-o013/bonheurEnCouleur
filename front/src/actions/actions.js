@@ -35,6 +35,22 @@ export const to60 = () => ({
   type: 'TO60',
 });
 
+export const popUpColors = () => ({
+  type: 'POPCOLORS',
+});
+
+export const popUpPackage = () => ({
+  type: 'POPPACKAGE',
+});
+
+export const popUpOffColor = () => ({
+  type: 'POPOFFCOLOR',
+});
+
+export const popUpOffPackage = () => ({
+  type: 'POPOFFPACKAGE',
+});
+
 export const delet = () => ({
   type: 'DELET',
 });

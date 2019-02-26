@@ -13,10 +13,6 @@ class NextButton extends Component {
     };
   }
 
-  handleClick() {
-    this.props.next();
-  }
-
   render() {
     return (
       <NavLink to={`/${this.props.section}/${this.props.step}`} className="next" onClick={this.props.nextStep}><img src={next} className="arrow" alt="next" /></NavLink>
@@ -25,7 +21,7 @@ class NextButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  step: state.step,
+  step: state.Reducer.step,
 });
 
 const mapDispatchToProps = dispatch => (

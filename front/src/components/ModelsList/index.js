@@ -61,7 +61,7 @@ class ModelsList extends Component {
 }
 
 const mapStateToProps = state => ({
-  limit: state.limit,
+  limit: state.Reducer.limit,
 });
 
 const mapDispatchToProps = dispatch => (

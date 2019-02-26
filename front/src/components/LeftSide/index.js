@@ -24,8 +24,9 @@ class LeftSide extends Component {
         <div className="left-container">
           <p className="bold-item">2. Choisissez le nombre de fleurs</p>
           <AmountButton />
-          <p className="bold-item">3. Choisissez un package</p>
+          <p className="bold-item">3. Choisissez un package ...</p>
           <ModelsList />
+          <p className="bold-item">... et personnalisez</p>
           <ListeCouleurs />
         </div>
       );
