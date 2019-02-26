@@ -1,0 +1,89 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form-data{
+    margin-top: 15px;
+}
+
+.input-field, textarea{
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+}
+
+.textareawidth{
+    width: 72%;
+}
+
+.input-group{
+    display: flex;
+    justify-content: center;
+    label{
+        width: 50%;
+    }
+}
+
+label{
+    display: block;
+    width: 100%;
+    padding: .3em .2em;
+    box-sizing: border-box;
+}
+
+.visually-hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+}
+
+.titleform{
+    font-family: "Quicksand";
+    padding-left: 10px;
+    margin: 20px 0;
+    text-align: center;
+    color: #102643;
+}
+
+.buttonform{
+        display: block;
+        margin: auto;
+        padding: 0;
+        width: 150px;
+        height: 40px;
+        border: 2px solid #DDAD9F;
+        border-radius: 40px;
+        background: transparent;
+        color: #DDAD9F;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-family: "Quicksand";
+        -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+        transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+        text-align: center;
+    }
+
+.buttonform:hover {
+    background-color: #DDAD9F;
+    color: #fff;
+    }
+
+.required{
+    color: red;
+    font-family: "Quicksand";
+    font-size: 8px;
+    display: block;
+}
