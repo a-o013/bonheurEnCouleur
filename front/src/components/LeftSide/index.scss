@@ -2,11 +2,13 @@
     display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 720px) {
     .left-container {
         background-color: white;
         width: 500px;
+        max-height: 100vh;
         height: calc(100vh - 70px);
+        overflow-y: scroll;
         z-index: 0;
         display: block;
     }

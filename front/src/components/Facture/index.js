@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
 
 class Facture extends Component {
   constructor(props) {
@@ -12,22 +13,24 @@ class Facture extends Component {
     return (
       <div className="facture">
         <div className="facture__header">
-          <p className="facture__header__num">Numéro de facture</p>
+          <p className="facture__header__num">Numéro de facture:</p>
           <img className="facture__header__logo" src="https://image.noelshack.com/fichiers/2019/06/4/1549530643-logo-fleur.png" alt="logo bonheur en couleur" />
         </div>
 
         <div className="facture__contact">
           <div className="facture__contact__address">
             <p>
-              Nom Prénom
+              {`${this.props.order.nom_complet}${this.props.order.prenom_complet}`}
+            </p>
+            <p>
               <br />
-              Rue, numéro,Boîte
+              {`${this.props.order.rue_livraison}`}
               <br />
-              Commune, Code Postal
+              {`${this.props.order.postcode_livraison}${this.props.order.commune_livraison}`}
             </p>
           </div>
           <p className="facture__contact__date">
-            Date
+            {`${new Date().toISOString().slice(0, 10)}`}
           </p>
         </div>
 
@@ -55,7 +58,7 @@ class Facture extends Component {
                 <td>20</td>
               </tr>
               <tr>
-                <td>FLEUR 6 </td>
+                <td> 6 </td>
                 <td>3</td>
                 <td>1</td>
                 <td>3</td>
@@ -71,11 +74,14 @@ class Facture extends Component {
         <div className="facture__validation">
           <p className="facture__validation__title">Critères de validation :</p>
           <p className="facture__validation__corps">
-            Le virement est a effectué sur le compte BEXX XXXX XXXX XXXX dès réception
-            de cet e-mail.
+            Bonheur en couleurs vous remercie pour votre commande.
             <br />
-            Bonheur en couleurs vous enverra ensuite votre calendrier personnalisé à l
-            adresse de livraison donnée.
+            <br />
+            Le virement est a effectué sur le compte BEXX XXXX XXXX XXXX avec pour
+             communication NOM-PRENOM, dès réception de cet e-mail.
+            <br />
+            Bonheur en couleurs vous enverra, dès reception de votre virement,
+             votre calendrier personnalisé à l’adresse de livraison donnée.
           </p>
         </div>
       </div>
@@ -83,4 +89,8 @@ class Facture extends Component {
   }
 }
 
-export default Facture;
+const mapStateToProps = state => ({
+  order: state.Reducer.order,
+});
+
+export default connect(mapStateToProps)(Facture);

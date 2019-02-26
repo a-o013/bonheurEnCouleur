@@ -34,9 +34,6 @@ export default class Export extends Component {
         <div ref={(el) => { this.toPrint = el; }} className="canvas-container">
           <Facture />
         </div>
-        <div className="button-container">
-          <button type="button" onClick={() => this.printDocument()}>Print</button>
-        </div>
       </div>
     );
   }

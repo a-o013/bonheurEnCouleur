@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { NavLink } from 'react-router-dom';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
-import MonthList from '../MonthList/index';
+import Facture from '../Facture/index';
+import FormContainer from '../FormContainer/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -32,7 +34,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-            planche
+              planche
             </div>
           </div>
         </div>
@@ -49,7 +51,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <MonthList />
+              <FormContainer />
+              <NavLink to="/calendrier/3">3</NavLink>
             </div>
           </div>
         </div>
@@ -65,7 +68,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <MonthList />
+              <Facture />
             </div>
           </div>
         </div>

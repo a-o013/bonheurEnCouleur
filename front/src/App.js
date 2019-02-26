@@ -12,6 +12,7 @@ const App = () => (
       <Route path="/:section/:step" component={Simulator} />
       <Route path="/facture" component={Facture} />
     </Switch>
+
   </div>
 );
 
