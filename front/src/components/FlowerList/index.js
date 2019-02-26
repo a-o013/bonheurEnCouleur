@@ -32,7 +32,7 @@ class FlowerList extends Component {
 
   render() {
     const flowers = table.map(elem => (
-      <Flower key={elem.key} flower={this.props.column[elem.key - 1]} />
+      <Flower flower={elem.key} column={this.props.column} clear={elem.img} />
     ));
     return (
       <li>

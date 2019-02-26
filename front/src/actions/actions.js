@@ -50,3 +50,17 @@ export const popUpOffColor = () => ({
 export const popUpOffPackage = () => ({
   type: 'POPOFFPACKAGE',
 });
+
+export const delet = () => ({
+  type: 'DELET',
+});
+
+export const changeColor = object => ({
+  type: 'CHANGECOLOR',
+  payload: object,
+});
+
+export const changeAmount = object => ({
+  type: 'CHANGEAMOUNT',
+  payload: object,
+});

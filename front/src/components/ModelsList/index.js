@@ -38,34 +38,7 @@ class ModelsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      limit: 1,
     };
-  }
-
-  nextModel() {
-    if (this.state.limit === 5) {
-      this.setState({
-        limit: 1,
-      });
-    } else {
-      this.setState(
-        prevState => ({ limit: prevState.limit + 1 }
-        ),
-      );
-    }
-  }
-
-  previousModel() {
-    if (this.state.limit === 1) {
-      this.setState({
-        limit: 5,
-      });
-    } else {
-      this.setState(
-        prevState => ({ limit: prevState.limit - 1 }
-        ),
-      );
-    }
   }
 
   render() {

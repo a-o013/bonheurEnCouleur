@@ -19,14 +19,18 @@ class AmountButton extends Component {
   render() {
     return (
       <div className="amount-container">
-        <button className="amount-button" type="button" onClick={this.props.to30}>30</button>
-        <button className="amount-button" type="button" onClick={this.props.to40}>40</button>
-        <button className="amount-button" type="button" onClick={this.props.to50}>50</button>
-        <button className="amount-button" type="button" onClick={this.props.to60}>60</button>
+        <button className={(this.props.amount === 30 ? 'amount-selected' : 'amount-button')} type="button" onClick={this.props.to30}>30</button>
+        <button className={(this.props.amount === 40 ? 'amount-selected' : 'amount-button')} type="button" onClick={this.props.to40}>40</button>
+        <button className={(this.props.amount === 50 ? 'amount-selected' : 'amount-button')} type="button" onClick={this.props.to50}>50</button>
+        <button className={(this.props.amount === 60 ? 'amount-selected' : 'amount-button')} type="button" onClick={this.props.to60}>60</button>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  amount: state.amount,
+});
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
@@ -37,4 +41,4 @@ const mapDispatchToProps = dispatch => (
   }, dispatch)
 );
 
-export default connect(null, mapDispatchToProps)(AmountButton);
+export default connect(mapStateToProps, mapDispatchToProps)(AmountButton);

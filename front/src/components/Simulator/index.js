@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { popUpOffColor, popUpOffPackage } from '../../actions/actions';
+import { popUpOffColor, popUpOffPackage, delet } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
@@ -12,15 +12,7 @@ import ListeCouleurs from '../ListeCouleurs/index';
 import PopupBtns from '../PopupBtns/index';
 import ModelsList from '../ModelsList';
 import AmountButton from '../AmountButton';
-
-const mapStateToProps = state => ({
-  popUpColors: state.popUpColors,
-  popUpPackages: state.popUpPackages,
-});
-
-const mapDispatchToProps = dispatch => (
-  bindActionCreators({ popUpOffColor, popUpOffPackage }, dispatch)
-);
+import FlowerPack from '../FlowerPack/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -34,6 +26,9 @@ class Simulator extends Component {
     this.setState({
       section: this.props.match.params.section,
     });
+    if (this.props.match.params.section === 'recharge') {
+      this.props.delet();
+    }
   }
 
   render() {
@@ -78,6 +73,7 @@ class Simulator extends Component {
                   <ModelsList />
                 </div>
               </div>
+              <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
             </div>
           </div>
         </div>
@@ -107,7 +103,12 @@ class Simulator extends Component {
             <PreviousButton />
             <NextButton section={this.state.section} />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <FlowerPack />
+            </div>
+          </div>
         </div>
       );
     }
@@ -118,7 +119,12 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              zzz
+            </div>
+          </div>
         </div>
       );
     }
@@ -127,5 +133,14 @@ class Simulator extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  popUpColors: state.popUpColors,
+  popUpPackages: state.popUpPackages,
+});
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ delet, popUpOffColor, popUpOffPackage }, dispatch)
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Simulator);

@@ -21,4 +21,15 @@
         background-color: #DDAD9F;
         color: #fff;
     }
+    .amount-selected {
+        padding: 15px;
+        border: 2px solid #102643;
+        border-radius: 100px;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        color: #102643;
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
