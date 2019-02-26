@@ -73,7 +73,6 @@ class Simulator extends Component {
                   <ModelsList />
                 </div>
               </div>
-              <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
             </div>
           </div>
         </div>
@@ -135,8 +134,8 @@ class Simulator extends Component {
 }
 
 const mapStateToProps = state => ({
-  popUpColors: state.popUpColors,
-  popUpPackages: state.popUpPackages,
+  popUpColors: state.Reducer.popUpColors,
+  popUpPackages: state.Reducer.popUpPackages,
 });
 
 const mapDispatchToProps = dispatch => (

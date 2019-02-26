@@ -2,6 +2,8 @@
     background-color: white;
     font-family: 'Quicksand';
     position: relative;
+    overflow-x: scroll;
+    height: 100vh;
     .step-container {
         display:flex;
         justify-content: center;
@@ -13,7 +15,7 @@
     .main-container {
         display: flex;
         .preview-container {
-            width: 100vw;
+            
         }
     }
 }
@@ -54,6 +56,7 @@
         }
     }
 }
+
 .close_btn{
     padding: 15px;
     margin: 0;
@@ -100,7 +103,14 @@
             .preview-container {
                 margin-left: 500px;
                 width: calc(100vw - 500px);
+                height: 100vh;
             }
         }
+    }
+}
+
+@media screen and (min-width: 670px) {
+    .preview-container {
+        width: 100vw;
     }
 }

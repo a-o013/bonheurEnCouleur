@@ -1,13 +1,14 @@
 .popUp{
     position: fixed;
-    margin: 10px 120px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 .popUp_btn {
-    display: inline;
-    margin: 5px;
     padding: 0;
     width: 140px;
     height: 40px;
+    margin: 5px;
     border: 2px solid #DDAD9F;
     border-radius: 40px;
     color: #DDAD9F;
@@ -24,11 +25,25 @@
     color: #fff;
 }
 
+.popUp_btn_div {
+    display: flex;
+}
+
 @media screen and (min-width: 1200px) {
+    .popUp {
+        width: calc(100vw - 500px);
+    }
     .popUp_btn{
-        
         &_mobile{
             display: none;
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popUp {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }

@@ -106,8 +106,8 @@ const mapDispatchToProps = dispatch => (
 );
 
 const mapStateToProps = state => ({
-  currentColor: state.currentColor,
-  popUpOffColor: state.popUp,
+  currentColor: state.Reducer.currentColor,
+  popUpOffColor: state.Reducer.popUp,
 });
 
 class ListeCouleurs extends Component {
