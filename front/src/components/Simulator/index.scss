@@ -12,18 +12,42 @@
     .main-container {
         display: flex;
         .preview-container {
-          margin: 0 auto;
-          margin-top: 100px;
+            width: 100vw;
         }
     }
 }
+
+.clear-button {
+    padding: 15px;
+    border: 2px solid #DDAD9F;
+    border-radius: 30px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: #DDAD9F;
+    font-size: 20px;
+    font-weight: 700;
+    &:hover {
+        color: #102643;
+        border: 2px solid #102643;
+    }
+}
+
 
 @media screen and (min-width: 1200px) {
     .simulator-container {
         background-color: #F4F4F4;
         .step-container {
             width: 500px;
-            position: relative;
+            position: fixed;
+        }
+        .main-container {
+            display: flex;
+            .preview-container {
+                margin-left: 500px;
+                width: calc(100vw - 500px);
+            }
         }
     }
+    
 }

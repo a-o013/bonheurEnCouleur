@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { delet } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import FlowerPack from '../FlowerPack/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -18,6 +22,9 @@ class Simulator extends Component {
     this.setState({
       section: this.props.match.params.section,
     });
+    if (this.props.match.params.section === 'recharge') {
+      this.props.delet();
+    }
   }
 
   render() {
@@ -50,6 +57,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <MonthList />
+              <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
             </div>
           </div>
         </div>
@@ -79,7 +87,12 @@ class Simulator extends Component {
             <PreviousButton />
             <NextButton section={this.state.section} />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <FlowerPack />
+            </div>
+          </div>
         </div>
       );
     }
@@ -90,7 +103,12 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              zzz
+            </div>
+          </div>
         </div>
       );
     }
@@ -100,4 +118,8 @@ class Simulator extends Component {
   }
 }
 
-export default Simulator;
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ delet }, dispatch)
+);
+
+export default connect(null, mapDispatchToProps)(Simulator);

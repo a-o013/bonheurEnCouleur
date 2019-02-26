@@ -1,0 +1,31 @@
+.amount-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    .amount-button {
+        padding: 15px;
+        border: 2px solid #DDAD9F;
+        border-radius: 100px;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        color: #DDAD9F;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    & :hover {
+        color: #102643;
+        border: 2px solid #102643;
+    }
+    .amount-selected {
+        padding: 15px;
+        border: 2px solid #102643;
+        border-radius: 100px;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        color: #102643;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

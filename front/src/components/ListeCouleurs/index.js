@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { selectColor } from '../../actions/actions';
 import img1 from '../../assets/images/flowers/1.png';
 import img2 from '../../assets/images/flowers/2.png';
 import img3 from '../../assets/images/flowers/3.png';
@@ -108,7 +111,11 @@ class ListeCouleurs extends Component {
 
   render() {
     const listeCouleurs = couleur.map(elem => (
-      <li key={elem.key}><img className="images" src={elem.img} alt="choix-couleurs" /></li>
+      <li key={elem.key}>
+        <button id={elem.key} className={`color-button ${(this.props.currentColor === elem.key ? 'selected' : '')}`} type="button" onClick={() => this.props.selectColor(elem.key)}>
+          <img className="images" src={elem.img} alt="choix-couleurs" />
+        </button>
+      </li>
     ));
 
     return (
@@ -123,4 +130,12 @@ class ListeCouleurs extends Component {
   }
 }
 
-export default ListeCouleurs;
+const mapStateToProps = state => ({
+  currentColor: state.currentColor,
+});
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ selectColor }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListeCouleurs);
