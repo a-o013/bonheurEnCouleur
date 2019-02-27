@@ -17,6 +17,7 @@ import AmountButton from '../AmountButton';
 import FlowerPack from '../FlowerPack/index';
 import plancheChoco from '../../assets/images/Planche_chocolat.png';
 import plancheGrise from '../../assets/images/Planche_grise.png';
+import BtnPlanche from '../BtnPlanche/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class Simulator extends Component {
             <div className="preview-container">
               <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
+              <BtnPlanche />
             </div>
           </div>
         </div>

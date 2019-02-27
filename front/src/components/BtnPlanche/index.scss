@@ -1,5 +1,7 @@
 .container_btn_planches{
     text-align: center;
+    z-index: 2;
+    padding-top: 200px;
 }
 .btn_planches_image{
     width:90%;
@@ -18,4 +20,11 @@
     border: 3px solid #102643;
     border-radius: 5px;
     margin: 5%
+}
+
+@media screen and (min-width: 1200px){
+    .container_btn_planches{
+        z-index: -2;
+        padding-top: 0px;
+    }
 }
