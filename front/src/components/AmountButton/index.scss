@@ -2,29 +2,33 @@
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    margin: 25px;
     .amount-button {
         padding: 15px;
+        margin: 0;
         border: 2px solid #DDAD9F;
         border-radius: 100px;
-        background-color: transparent;
         outline: none;
         cursor: pointer;
         color: #DDAD9F;
         font-size: 20px;
         font-weight: 700;
+        -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+        transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+        background: transparent;
     }
     & :hover {
-        color: #102643;
-        border: 2px solid #102643;
+        background-color: #DDAD9F;
+        color: #fff;
     }
     .amount-selected {
         padding: 15px;
-        border: 2px solid #102643;
+        border: 2px solid #DDAD9F;
+        background-color: #DDAD9F;
         border-radius: 100px;
-        background-color: transparent;
         outline: none;
         cursor: pointer;
-        color: #102643;
+        color: #fff;
         font-size: 20px;
         font-weight: 700;
     }

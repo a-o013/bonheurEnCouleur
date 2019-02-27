@@ -1,0 +1,56 @@
+.flower-pack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+    .flower-pack-item {
+        display: inline-block;
+        padding: 30px;
+        width: 110px;
+        .flower-pack-image {
+            width: 110px;
+            height: 110px;
+        }
+        .amount-container {
+            margin: 0;
+            .flower-pack-button {
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                border: 2px solid #DDAD9F;
+                border-radius: 100px;
+                color: #DDAD9F;
+                font-size: 20px;
+                font-family: "Quicksand";
+                cursor: pointer;
+                outline: none;
+                -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+                transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+                &:hover {
+                    background-color: #DDAD9F;
+                    color: #fff;
+                }
+            }
+            .flower-pack-input {
+                width: 40px;
+                text-align: center;
+                background-color: #DDAD9F;
+                color: #fff;
+                font-weight: 700;
+                border: none;
+                border-radius: 5px;
+                margin: 0px 5px 0px 5px;
+                outline: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .flower-pack-list {
+        margin-top: 0;
+    }
+}

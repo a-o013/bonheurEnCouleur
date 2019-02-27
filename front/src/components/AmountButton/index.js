@@ -29,7 +29,7 @@ class AmountButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  amount: state.amount,
+  amount: state.Reducer.amount,
 });
 
 const mapDispatchToProps = dispatch => (

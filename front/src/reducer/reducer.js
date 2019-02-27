@@ -2,16 +2,19 @@ import data from '../assets/models.json';
 
 const defaultState = {
   step: 1,
+  currentPlanche: 'on',
+  popUpColors: 'off',
+  popUpPackages: 'off',
   currentColor: 1,
   limit: 1,
   amount: 30,
   currentPreview: data.model1[30],
-  compteur: [...data.compteurs],
   regulator: 0,
   total: 0,
   prix: 0,
   resumerFleurs: [],
   warning: {},
+  currentAmount: data.counters,
 };
 
 const Reducer = (state = defaultState, action) => {
@@ -25,6 +28,36 @@ const Reducer = (state = defaultState, action) => {
       return {
         ...state,
         step: state.step - 1,
+      };
+    case 'SELECTGRAY':
+      return {
+        ...state,
+        currentPlanche: 'on',
+      };
+    case 'SELECTCHOCO':
+      return {
+        ...state,
+        currentPlanche: 'off',
+      };
+    case 'POPCOLORS':
+      return {
+        ...state,
+        popUpColors: 'on',
+      };
+    case 'POPOFFCOLOR':
+      return {
+        ...state,
+        popUpColors: 'off',
+      };
+    case 'POPPACKAGE':
+      return {
+        ...state,
+        popUpPackages: 'on',
+      };
+    case 'POPOFFPACKAGE':
+      return {
+        ...state,
+        popUpPackages: 'off',
       };
     case 'SELECTCOLOR':
       return {
@@ -132,6 +165,38 @@ const Reducer = (state = defaultState, action) => {
           isVisible: action.payload.isVisible,
           message: action.payload.message,
         },
+      };
+    case 'CHANGEAMOUNT':
+      if (action.payload.name === 'button-add' && state.currentAmount[action.payload.key - 1] !== 100) {
+        return {
+          ...state,
+          currentAmount: {
+            ...state.currentAmount,
+            [action.payload.key - 1]: state.currentAmount[action.payload.key - 1] + 1,
+          },
+        };
+      }
+      if (action.payload.name === 'button-remove' && state.currentAmount[action.payload.key - 1] !== 0) {
+        return {
+          ...state,
+          currentAmount: {
+            ...state.currentAmount,
+            [action.payload.key - 1]: state.currentAmount[action.payload.key - 1] - 1,
+          },
+        };
+      }
+      if (action.payload.name === 'input' && action.payload.value >= 0) {
+        return {
+          ...state,
+          currentAmount: {
+            ...state.currentAmount,
+            [action.payload.key - 1]: (action.payload.value === '' ? 0 : parseInt(action.payload.value, 0)),
+          },
+        };
+      }
+      return {
+        state,
+        currentAmount: state.currentAmount,
       };
     default:
       return state;

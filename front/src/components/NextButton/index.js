@@ -50,9 +50,9 @@ class NextButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  step: state.step,
-  total: state.total,
-  isVisible: state.warning.isVisible,
+  step: state.Reducer.step,
+  total: state.Reducer.total,
+  isVisible: state.Reducer.warning.isVisible,
 });
 
 const mapDispatchToProps = dispatch => (

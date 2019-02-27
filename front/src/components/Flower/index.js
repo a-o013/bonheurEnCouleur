@@ -30,10 +30,10 @@ class Flower extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentColor: state.currentColor,
-  amount: state.amount,
-  currentPreview: state.currentPreview,
-  regulator: state.regulator,
+  currentColor: state.Reducer.currentColor,
+  amount: state.Reducer.amount,
+  currentPreview: state.Reducer.currentPreview,
+  regulator: state.Reducer.regulator,
 });
 
 const mapDispatchToProps = dispatch => (

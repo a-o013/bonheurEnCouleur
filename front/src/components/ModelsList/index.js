@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.scss';
-import ReactTimeout from 'react-timeout';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { nextModel, previousModel } from '../../actions/actions';
@@ -62,11 +61,11 @@ class ModelsList extends Component {
 }
 
 const mapStateToProps = state => ({
-  limit: state.limit,
+  limit: state.Reducer.limit,
 });
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({ nextModel, previousModel }, dispatch)
 );
 
-export default ReactTimeout(connect(mapStateToProps, mapDispatchToProps)(ModelsList));
+export default connect(mapStateToProps, mapDispatchToProps)(ModelsList);

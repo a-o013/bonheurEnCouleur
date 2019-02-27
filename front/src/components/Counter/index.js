@@ -95,9 +95,8 @@ class Counter extends Component {
 }
 
 const mapStateToProps = state => ({
-  amount: state.amount,
-  currentPreview: state.currentPreview,
-  compteur: state.compteur,
+  amount: state.Reducer.amount,
+  currentPreview: state.Reducer.currentPreview,
 });
 
 const mapDispatchToProps = dispatch => (
