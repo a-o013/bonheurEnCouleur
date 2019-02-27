@@ -63,6 +63,7 @@ class Simulator extends Component {
             <PreviousButton />
             <NextButton section={this.state.section} />
             <Snackbar
+              className="snackbar"
               anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
               open={this.props.warning.isVisible}
               message={this.props.warning.message}
