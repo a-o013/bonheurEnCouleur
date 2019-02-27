@@ -2,6 +2,7 @@ import data from '../assets/models.json';
 
 const defaultState = {
   step: 1,
+  currentPlanche: 'on',
   popUpColors: 'off',
   popUpPackages: 'off',
   currentColor: 1,
@@ -22,6 +23,16 @@ const Reducer = (state = defaultState, action) => {
       return {
         ...state,
         step: state.step - 1,
+      };
+    case 'SELECTGRAY':
+      return {
+        ...state,
+        currentPlanche: 'on',
+      };
+    case 'SELECTCHOCO':
+      return {
+        ...state,
+        currentPlanche: 'off',
       };
     case 'POPCOLORS':
       return {

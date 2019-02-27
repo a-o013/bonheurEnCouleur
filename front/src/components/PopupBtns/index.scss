@@ -1,8 +1,6 @@
 .popUp{
-    position: fixed;
     display: flex;
     justify-content: center;
-    width: 100vw;
 }
 .popUp_btn {
     padding: 0;
@@ -40,7 +38,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
     .popUp {
         display: flex;
         justify-content: center;

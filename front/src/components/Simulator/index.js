@@ -13,12 +13,15 @@ import PopupBtns from '../PopupBtns/index';
 import ModelsList from '../ModelsList';
 import AmountButton from '../AmountButton';
 import FlowerPack from '../FlowerPack/index';
+import plancheChoco from '../../assets/images/Planche_chocolat.png';
+import plancheGrise from '../../assets/images/Planche_grise.png';
 
 class Simulator extends Component {
   constructor(props) {
     super(props);
     this.state = {
       section: '',
+
     };
   }
 
@@ -43,7 +46,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              planche
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
             </div>
           </div>
         </div>
@@ -60,6 +64,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
               <PopupBtns />
               <div className={`popUp__button_listeCouleurs_${this.props.popUpColors}`}>
@@ -88,6 +94,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
             </div>
           </div>
@@ -136,6 +144,7 @@ class Simulator extends Component {
 const mapStateToProps = state => ({
   popUpColors: state.Reducer.popUpColors,
   popUpPackages: state.Reducer.popUpPackages,
+  currentPlanche: state.Reducer.currentPlanche,
 });
 
 const mapDispatchToProps = dispatch => (

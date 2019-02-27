@@ -15,7 +15,9 @@ class NextButton extends Component {
 
   render() {
     return (
-      <NavLink to={`/${this.props.section}/${this.props.step}`} className="next" onClick={this.props.nextStep}><img src={next} className="arrow" alt="next" /></NavLink>
+      <NavLink to={`/${this.props.section}/${this.props.step}`} className="next" onClick={this.props.nextStep}>
+        <img src={next} className="arrow" alt="next" />
+      </NavLink>
     );
   }
 }
