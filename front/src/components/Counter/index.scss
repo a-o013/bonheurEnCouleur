@@ -1,12 +1,14 @@
 .info_conteurs{
     display: flex;
+    justify-content: center;
     &_elem{
         padding: 15px;
     }
 }
 
-.bold-item {
+.bold-item_conteur {
     font-size: 20px;
     font-family: "Quicksand";
     color: #102643;
+    margin:0;
 }
