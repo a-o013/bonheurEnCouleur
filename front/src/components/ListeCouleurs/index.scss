@@ -3,13 +3,14 @@
     width: 80px;
     background-color: #FFFFFF;
     display: block;
-    
+
 }
 .container_liste{
     background-color: #F5F5F5;
-    height: 33%;
-    width: 33%;
-    padding: 2%;
+    height: auto;
+    width: 300px;
+    padding: 3%;
+    margin: auto;
 }
 .scroll_liste {
     height: 248px;
@@ -33,15 +34,14 @@
     list-style: none;
     justify-content: center;
 }
-
 .color-button {
     border: none;
-    padding: 3px;
+    padding: 0px;
     background-color: transparent;
     cursor: pointer;
     outline: none;
+    margin: 5px;
 }
-
 .selected {
     border: 3px solid #102643;
     border-radius: 5px;

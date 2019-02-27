@@ -30,10 +30,10 @@ class NextButton extends Component {
 
   less30() {
     if (this.props.total < 30 && this.props.location.pathname === '/calendrier/2') {
-      return this.props.warning({ isVisible: true, message: 'Choisir minimum 30 fleurs' });
+      return this.props.warning({ isVisible: true, message: 'Choisissez au minimum 30 fleurs' });
     }
     if (this.props.total % 10 !== 0 && this.props.location.pathname === '/calendrier/2') {
-      return this.props.warning({ isVisible: true, message: 'Choisir un total de fleurs multiple de 10' });
+      return this.props.warning({ isVisible: true, message: 'Les fleurs doivent être commandées par dizaines' });
     }
     this.props.warning({ isVisible: false, message: '' });
     this.props.nextStep();
@@ -50,9 +50,9 @@ class NextButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  step: state.step,
-  total: state.total,
-  isVisible: state.warning.isVisible,
+  step: state.Reducer.step,
+  total: state.Reducer.total,
+  isVisible: state.Reducer.warning.isVisible,
 });
 
 const mapDispatchToProps = dispatch => (

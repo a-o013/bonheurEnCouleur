@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { totals, setPrice, setResumerflower } from '../../actions/actions';
@@ -82,11 +83,14 @@ class Counter extends Component {
       <div className="info_conteurs">
         <p className="bold-item info_conteurs_elem">
           Total fleurs:
-          {this.state.totalArray.length}
+          {(this.props.match.params.section === 'calendrier' ? this.state.totalArray.length : 0)}
         </p>
         <p className="bold-item info_conteurs_elem">
           Prix total:
           {this.state.price}
+        <p className="bold-item">
+          Prix:
+          {(this.props.match.params.section === 'calendrier' ? this.state.price : 0)}
           €
         </p>
       </div>
@@ -95,13 +99,12 @@ class Counter extends Component {
 }
 
 const mapStateToProps = state => ({
-  amount: state.amount,
-  currentPreview: state.currentPreview,
-  compteur: state.compteur,
+  amount: state.Reducer.amount,
+  currentPreview: state.Reducer.currentPreview,
 });
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({ totals, setPrice, setResumerflower }, dispatch)
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Counter));

@@ -6,6 +6,14 @@ export const previousStep = () => ({
   type: 'PREVIOUSSTEP',
 });
 
+export const changeGris = () => ({
+  type: 'SELECTGRAY',
+});
+
+export const changeChoco = () => ({
+  type: 'SELECTCHOCO',
+});
+
 export const selectColor = currentColor => ({
   type: 'SELECTCOLOR',
   payload: currentColor,
@@ -33,6 +41,22 @@ export const to50 = () => ({
 
 export const to60 = () => ({
   type: 'TO60',
+});
+
+export const popUpColors = () => ({
+  type: 'POPCOLORS',
+});
+
+export const popUpPackage = () => ({
+  type: 'POPPACKAGE',
+});
+
+export const popUpOffColor = () => ({
+  type: 'POPOFFCOLOR',
+});
+
+export const popUpOffPackage = () => ({
+  type: 'POPOFFPACKAGE',
 });
 
 export const delet = () => ({
@@ -66,4 +90,9 @@ export const setResumerflower = array => ({
 export const warning = warningObj => ({
   type: 'WARNING',
   payload: warningObj,
+});
+
+export const changeAmount = object => ({
+  type: 'CHANGEAMOUNT',
+  payload: object,
 });

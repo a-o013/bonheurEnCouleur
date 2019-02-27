@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { nextStep } from '../../actions/actions';
+import calendrier from '../../assets/images/calendrier.png';
+import recharge from '../../assets/images/recharge.png';
 
 class OrderSection extends Component {
   constructor(props) {
@@ -14,20 +13,27 @@ class OrderSection extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <NavLink to="/calendrier/1" onClick={this.props.nextStep}>Calendrier</NavLink>
+      <div className="card" id="calendrier">
+        <div className=" card_holder">
+          <NavLink to="/calendrier/1" className="card_holder_text">
+            <div className="card_holder_border">
+              Calendrier
+              <img src={calendrier} alt="icone calendrier" className="icone" />
+            </div>
+          </NavLink>
         </div>
-        <div>
-          <NavLink to="/recharge/1" onClick={this.props.nextStep}>Recharge</NavLink>
+
+        <div className=" card_holder">
+          <NavLink to="/recharge/1" className="card_holder_text">
+            <div className="card_holder_border">
+              Recharge
+              <img src={recharge} alt="icone recharge" className="icone" />
+            </div>
+          </NavLink>
         </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = dispatch => (
-  bindActionCreators({ nextStep }, dispatch)
-);
-
-export default connect(null, mapDispatchToProps)(OrderSection);
+export default OrderSection;
