@@ -27,3 +27,9 @@
         margin-top: 70px;
     }
 }
+
+@media screen and (max-height: 700px) {
+    .left-container {
+        overflow-y: scroll;
+    }
+}
