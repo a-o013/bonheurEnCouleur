@@ -9,6 +9,11 @@ const defaultState = {
   limit: 1,
   amount: 30,
   currentPreview: data.model1[30],
+  regulator: 0,
+  total: 0,
+  prix: 0,
+  resumerFleurs: [],
+  warning: {},
   currentAmount: data.counters,
 };
 
@@ -114,28 +119,51 @@ const Reducer = (state = defaultState, action) => {
         ...state,
         currentPreview: data.default[0],
       };
-    case 'CHANGECOLOR':
-      if (state.currentPreview[action.payload.column][action.payload.flower - 1]
-        === state.currentColor) {
-        return {
-          ...state,
-          currentPreview: {
-            ...state.currentPreview,
-            [action.payload.column]: {
-              ...state.currentPreview[action.payload.column],
-              [action.payload.flower - 1]: 'empty-flower',
-            },
-          },
-        };
-      }
+    case 'CHANGECOLOR': {
+      const value = state.currentPreview[action.payload.column][action.payload.flower - 1]
+        === state.currentColor ? 'empty-flower' : state.currentColor;
+      const array = state.currentPreview[action.payload.column].map((elem, index) => {
+        if (index !== action.payload.flower - 1) {
+          return elem;
+        }
+        return value;
+      });
       return {
         ...state,
         currentPreview: {
           ...state.currentPreview,
-          [action.payload.column]: {
-            ...state.currentPreview[action.payload.column],
-            [action.payload.flower - 1]: state.currentColor,
-          },
+          [action.payload.column]: array,
+        },
+        regulator: state.regulator + 1,
+      };
+    }
+    case 'RECOUNT':
+      return {
+        ...state,
+        regulator: state.regulator + 1,
+      };
+    case 'TOTALS':
+      return {
+        ...state,
+        total: action.payload,
+      };
+    case 'SET_PRICE':
+      return {
+        ...state,
+        price: action.payload,
+      };
+    case 'SET_RESUMERFLOWER':
+      return {
+        ...state,
+        resumerFleurs: action.payload,
+      };
+    case 'WARNING':
+      return {
+        ...state,
+        warning: {
+          ...state.warning,
+          isVisible: action.payload.isVisible,
+          message: action.payload.message,
         },
       };
     case 'CHANGEAMOUNT':

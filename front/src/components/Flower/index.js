@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeColor } from '../../actions/actions';
+import { changeColor, reCount } from '../../actions/actions';
 
 class Flower extends Component {
   constructor(props) {
@@ -11,10 +11,17 @@ class Flower extends Component {
     };
   }
 
+  send(data) {
+    this.props.changeColor(data);
+    if (this.props.flower) {
+      this.props.reCount();
+    }
+  }
+
   render() {
     return (
       <li className="preview-item">
-        <button className="preview-button" type="button" onClick={() => this.props.changeColor({ column: this.props.column, flower: this.props.flower })}>
+        <button className="preview-button" type="button" onClick={() => this.send({ column: this.props.column, flower: this.props.flower })}>
           <img className="preview-image" src={`http://localhost:3000/flowers/${this.props.currentPreview[this.props.column][this.props.flower - 1]}.png`} alt="" />
         </button>
       </li>
@@ -26,10 +33,11 @@ const mapStateToProps = state => ({
   currentColor: state.Reducer.currentColor,
   amount: state.Reducer.amount,
   currentPreview: state.Reducer.currentPreview,
+  regulator: state.Reducer.regulator,
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ changeColor }, dispatch)
+  bindActionCreators({ changeColor, reCount }, dispatch)
 );
 
 

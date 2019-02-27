@@ -1,14 +1,18 @@
-.next {
+.next{
     background-color: #102643;
     cursor: pointer;
     padding-left: 45px;
     padding-right: 55px;
     display: flex;
     align-items: center;
+    border-style: none;
     .arrow {
         height: 40px
     }
-    
+    &_off{
+        opacity: 0.5;
+        cursor: auto;
+    }
     &:hover {
         background-color: #0a192c;
     }

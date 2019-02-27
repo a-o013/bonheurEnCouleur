@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Snackbar } from '@material-ui/core';
 import { popUpOffColor, popUpOffPackage, delet } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import Counter from '../Counter/index';
 import ListeCouleurs from '../ListeCouleurs/index';
 import PopupBtns from '../PopupBtns/index';
 import ModelsList from '../ModelsList';
@@ -60,6 +62,11 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
             <NextButton section={this.state.section} />
+            <Snackbar
+              anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+              open={this.props.warning.isVisible}
+              message={this.props.warning.message}
+            />
           </div>
           <div className="main-container">
             <LeftSide />
@@ -67,6 +74,7 @@ class Simulator extends Component {
               <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
+              <Counter />
               <PopupBtns />
               <div className={`popUp__button_listeCouleurs_${this.props.popUpColors}`}>
                 <button type="button" onClick={() => this.props.popUpOffColor()} className="close_btn">X</button>
@@ -97,6 +105,7 @@ class Simulator extends Component {
               <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
+              <Counter />
             </div>
           </div>
         </div>
@@ -145,6 +154,7 @@ const mapStateToProps = state => ({
   popUpColors: state.Reducer.popUpColors,
   popUpPackages: state.Reducer.popUpPackages,
   currentPlanche: state.Reducer.currentPlanche,
+  warning: state.Reducer.warning,
 });
 
 const mapDispatchToProps = dispatch => (
