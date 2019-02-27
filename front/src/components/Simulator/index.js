@@ -10,6 +10,7 @@ import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
 import Counter from '../Counter/index';
+import DetailCommande from '../DetailCommande/index';
 import ListeCouleurs from '../ListeCouleurs/index';
 import PopupBtns from '../PopupBtns/index';
 import ModelsList from '../ModelsList';
@@ -109,6 +110,7 @@ class Simulator extends Component {
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
               <Counter />
+              <DetailCommande />
             </div>
           </div>
         </div>

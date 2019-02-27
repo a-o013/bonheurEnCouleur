@@ -1,3 +1,10 @@
+.info_conteurs{
+    display: flex;
+    &_elem{
+        padding: 15px;
+    }
+}
+
 .bold-item {
     font-size: 20px;
     font-family: "Quicksand";

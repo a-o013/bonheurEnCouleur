@@ -22,7 +22,7 @@ class Flower extends Component {
     return (
       <li className="preview-item">
         <button className="preview-button" type="button" onClick={() => this.send({ column: this.props.column, flower: this.props.flower })}>
-          <img className="preview-image" src={`http://localhost:3000/flowers/${this.props.currentPreview[this.props.column][this.props.flower - 1]}.png`} alt="" />
+          <img className="preview-image" src={`/flowers/${this.props.currentPreview[this.props.column][this.props.flower - 1]}.png`} alt="" />
         </button>
       </li>
     );
