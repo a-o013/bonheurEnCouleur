@@ -18,7 +18,7 @@ class NavBar extends Component {
             <p className="navbar__link__welcome" href="#welcome">WELCOME</p>
           </a>
           <ul className="navbar__menu">
-            <li className="navbar__menu__item"><a className="navbar__menu__item__link" href="#calendriercal">Calendrier</a></li>
+            <li className="navbar__menu__item"><a className="navbar__menu__item__link" href="#calendrier">Calendrier</a></li>
             <li className="navbar__menu__item"><a className="navbar__menu__item__link" href="#concept">Concept</a></li>
           </ul>
         </nav>
