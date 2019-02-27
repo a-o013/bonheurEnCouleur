@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => (
 );
 
 const mapStateToProps = state => ({
-  currentPlanche: state.currentPlanche,
+  currentPlanche: state.Reducer.currentPlanche,
 });
 
 class BtnPlanche extends Component {

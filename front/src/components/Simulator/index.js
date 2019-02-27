@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { popUpOffColor, popUpOffPackage, delet } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import ListeCouleurs from '../ListeCouleurs/index';
+import PopupBtns from '../PopupBtns/index';
+import ModelsList from '../ModelsList';
+import AmountButton from '../AmountButton';
+import FlowerPack from '../FlowerPack/index';
 import plancheChoco from '../../assets/images/Planche_chocolat.png';
 import plancheGrise from '../../assets/images/Planche_grise.png';
-
-
-const mapStateToProps = state => ({
-  currentPlanche: state.currentPlanche,
-});
 
 class Simulator extends Component {
   constructor(props) {
@@ -27,6 +29,9 @@ class Simulator extends Component {
     this.setState({
       section: this.props.match.params.section,
     });
+    if (this.props.match.params.section === 'recharge') {
+      this.props.delet();
+    }
   }
 
   render() {
@@ -62,6 +67,18 @@ class Simulator extends Component {
               <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />
+              <PopupBtns />
+              <div className={`popUp__button_listeCouleurs_${this.props.popUpColors}`}>
+                <button type="button" onClick={() => this.props.popUpOffColor()} className="close_btn">X</button>
+                <ListeCouleurs />
+              </div>
+              <div className={`popUp__button_packages_${this.props.popUpPackages}`}>
+                <button type="button" onClick={() => this.props.popUpOffPackage()} className="close_btn">X</button>
+                <div className="popUp__button_packages_card">
+                  <AmountButton />
+                  <ModelsList />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -93,7 +110,12 @@ class Simulator extends Component {
             <PreviousButton />
             <NextButton section={this.state.section} />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              <FlowerPack />
+            </div>
+          </div>
         </div>
       );
     }
@@ -104,7 +126,12 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
           </div>
-          <LeftSide />
+          <div className="main-container">
+            <LeftSide />
+            <div className="preview-container">
+              zzz
+            </div>
+          </div>
         </div>
       );
     }
@@ -114,4 +141,14 @@ class Simulator extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Simulator);
+const mapStateToProps = state => ({
+  popUpColors: state.Reducer.popUpColors,
+  popUpPackages: state.Reducer.popUpPackages,
+  currentPlanche: state.Reducer.currentPlanche,
+});
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({ delet, popUpOffColor, popUpOffPackage }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Simulator);
