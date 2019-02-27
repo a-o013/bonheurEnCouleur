@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Snackbar } from '@material-ui/core';
 import { delet } from '../../actions/actions';
 import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
+import Counter from '../Counter/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -35,7 +37,7 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-            planche
+              planche
             </div>
           </div>
         </div>
@@ -48,12 +50,18 @@ class Simulator extends Component {
             <StepBar />
             <PreviousButton />
             <NextButton section={this.state.section} />
+            <Snackbar
+              anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+              open={this.props.warning.isVisible}
+              message={this.props.warning.message}
+            />
           </div>
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
               <MonthList />
               <button className="clear-button" type="button" onClick={this.props.delet}>Effacer le calendrier</button>
+              <Counter />
             </div>
           </div>
         </div>
@@ -70,6 +78,7 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <MonthList />
+              <Counter />
             </div>
           </div>
         </div>
@@ -104,8 +113,12 @@ class Simulator extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  warning: state.warning,
+});
+
 const mapDispatchToProps = dispatch => (
   bindActionCreators({ delet }, dispatch)
 );
 
-export default connect(null, mapDispatchToProps)(Simulator);
+export default connect(mapStateToProps, mapDispatchToProps)(Simulator);

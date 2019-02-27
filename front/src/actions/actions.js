@@ -43,3 +43,27 @@ export const changeColor = object => ({
   type: 'CHANGECOLOR',
   payload: object,
 });
+
+export const reCount = () => ({
+  type: 'RECOUNT',
+});
+
+export const totals = total => ({
+  type: 'TOTALS',
+  payload: total,
+});
+
+export const setPrice = price => ({
+  type: 'SET_PRICE',
+  payload: price,
+});
+
+export const setResumerflower = array => ({
+  type: 'SET_RESUMERFLOWER',
+  payload: array,
+});
+
+export const warning = warningObj => ({
+  type: 'WARNING',
+  payload: warningObj,
+});

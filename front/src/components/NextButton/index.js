@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { nextStep } from '../../actions/actions';
+import { nextStep, totals, warning } from '../../actions/actions';
 import next from '../../assets/images/arrow-right.svg';
 
 class NextButton extends Component {
@@ -11,25 +11,53 @@ class NextButton extends Component {
     super(props);
     this.state = {
     };
+
+    this.clearSnackbar = this.clearSnackbar.bind(this);
   }
 
-  handleClick() {
-    this.props.next();
+  componentDidUpdate(prevProps) {
+    if (prevProps.step !== this.props.step) {
+      this.props.history.push(`/${this.props.section}/${this.props.step}`);
+    }
+    if (this.props.isVisible === true) {
+      setTimeout(this.clearSnackbar, 2000);
+    }
+  }
+
+  clearSnackbar() {
+    this.props.warning({ isVisible: false, message: '' });
+  }
+
+  less30() {
+    if (this.props.total < 30 && this.props.location.pathname === '/calendrier/2') {
+      return this.props.warning({ isVisible: true, message: 'Choisir minimum 30 fleurs' });
+    }
+    if (this.props.total % 10 !== 0 && this.props.location.pathname === '/calendrier/2') {
+      return this.props.warning({ isVisible: true, message: 'Choisir un total de fleurs multiple de 10' });
+    }
+    this.props.warning({ isVisible: false, message: '' });
+    this.props.nextStep();
+    return null;
   }
 
   render() {
     return (
-      <NavLink to={`/${this.props.section}/${this.props.step}`} className="next" onClick={this.props.nextStep}><img src={next} className="arrow" alt="next" /></NavLink>
+      <button type="button" className={(this.props.total < 30 && this.props.location.pathname === '/calendrier/2') || (this.props.total % 10 !== 0 && this.props.location.pathname === '/calendrier/2') ? 'next next_off' : 'next'} onClick={() => this.less30()}>
+        <img src={next} className="arrow" alt="next" />
+      </button>
     );
   }
 }
 
 const mapStateToProps = state => ({
   step: state.step,
+  total: state.total,
+  isVisible: state.warning.isVisible,
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ nextStep }, dispatch)
+  bindActionCreators({ nextStep, totals, warning }, dispatch)
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(NextButton);
+const container = withRouter(NextButton);
+export default connect(mapStateToProps, mapDispatchToProps)(container);
