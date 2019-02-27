@@ -11,7 +11,7 @@ class FirstPage extends Component {
 
   render() {
     return (
-      <div>
+      <div id="welcome">
         <div className="background">
           <div className="background__text">
             <p className="background__text__p">Calendrier d’anniversaires</p>

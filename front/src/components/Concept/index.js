@@ -22,7 +22,7 @@ class Concept extends Component {
 
   render() {
     return (
-      <div>
+      <div id="concept">
         <section className="section_container">
           <div className="container_concept">
             <h2 className="section_title_1_text section_title_text">C’est quoi ?</h2>
