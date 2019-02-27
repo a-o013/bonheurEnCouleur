@@ -5,7 +5,6 @@ import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
-import Facture from '../Facture/index';
 import FormContainer from '../FormContainer/index';
 
 class Simulator extends Component {
@@ -67,9 +66,6 @@ class Simulator extends Component {
           </div>
           <div className="main-container">
             <LeftSide />
-            <div className="preview-container">
-              <Facture />
-            </div>
           </div>
         </div>
       );
