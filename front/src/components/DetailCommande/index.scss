@@ -1,0 +1,107 @@
+.popupDetail {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* The actual popup */
+.popupTextDetail {
+    visibility: hidden;
+    background-color: rgba(107, 107, 107,.7);
+    border-radius: 6px;
+    padding: 15px;
+    left: 60%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    height: 200px;
+    width: 310px;
+    overflow: scroll;
+}
+
+  /* Toggle this class - hide and show the popup */
+.showDetail {
+    visibility: visible;
+    animation: fadeIn 1s;
+    top: -335px;
+    
+}
+
+.btn_detail{
+    padding: 0;
+    width: 140px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid #DDAD9F;
+    border-radius: 40px;
+    color: #DDAD9F;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: "Quicksand";
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    background: transparent;
+    cursor: pointer;
+}
+.btn_detail:hover {
+    background-color: #DDAD9F;
+    color: #fff;
+}
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+    }
+.images_detail{
+    height: 50px;
+    width: 50px;
+}
+.liste_detail{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    color: #0000;
+    display: flex;
+}
+.detail_li{
+    display: flex;
+    justify-content: center;
+}
+.text_detail{
+    color:#FFFFFF;
+    font-size: 20px;
+}
+.text_detail_close{
+    position: relative;
+    margin: 0;
+    text-align: right;
+    border-color: transparent;
+    border-style: none;
+    padding: 0;
+    background-color: transparent;
+    float: right;
+}
+
+@media screen and (min-width: 500px) {
+        .btn_detail {
+            top: -74px;
+            position: relative;
+            left: 308px;
+        }
+        .popupTextDetail {
+            left:90%;
+        }
+}

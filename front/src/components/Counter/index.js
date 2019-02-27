@@ -79,12 +79,12 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <p className="bold-item">
+      <div className="info_conteurs">
+        <p className="bold-item info_conteurs_elem">
           Total fleurs:
           {this.state.totalArray.length}
         </p>
-        <p className="bold-item">
+        <p className="bold-item info_conteurs_elem">
           Prix total:
           {this.state.price}
           €

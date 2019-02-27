@@ -10,6 +10,7 @@ import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
 import MonthList from '../MonthList/index';
 import Counter from '../Counter/index';
+import DetailCommande from '../DetailCommande/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class Simulator extends Component {
             <div className="preview-container">
               <MonthList />
               <Counter />
+              <DetailCommande />
             </div>
           </div>
         </div>
