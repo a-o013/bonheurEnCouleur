@@ -6,6 +6,7 @@ import FormContainer from '../FormContainer/index';
 import ListeCouleurs from '../ListeCouleurs/index';
 import BtnPlanche from '../BtnPlanche/index';
 import AmountButton from '../AmountButton/index';
+import Counter from '../Counter/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -42,13 +43,16 @@ class LeftSide extends Component {
     if (this.props.location.pathname === '/recharge/1') {
       return (
         <div className="left-container">
-          zzz
+          <Counter />
         </div>
       );
     }
     if (this.props.location.pathname === '/recharge/2') {
       return (
-        <div className="left-container"><FormContainer /></div>
+        <div className="left-container">
+          <FormContainer />
+          <Counter />
+        </div>
       );
     }
     return (
