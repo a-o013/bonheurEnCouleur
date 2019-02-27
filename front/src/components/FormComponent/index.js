@@ -48,6 +48,7 @@ const renderField = ({
     {touched && ((error && <span className="required">{error}</span>) || (warning && <span>{warning}</span>))}
   </label>
 );
+
 // formulaire
 const SimpleForm = (props) => {
   const { handleSubmit } = props;
@@ -150,7 +151,9 @@ const SimpleForm = (props) => {
       />
 
       <div className="form-data">
-        <button type="submit" className="buttonform">COMMANDER !</button>
+        <button type="submit" className="buttonform">
+          COMMANDER !
+        </button>
       </div>
     </form>
   );
