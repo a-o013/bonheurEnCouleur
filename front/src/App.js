@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/index';
 import Simulator from './components/Simulator/index';
@@ -12,6 +12,7 @@ const App = () => (
       <Route path="/:section/:step" component={Simulator} />
       <Route path="/footer" component={Footer} />
     </Switch>
+
   </div>
 );
 
