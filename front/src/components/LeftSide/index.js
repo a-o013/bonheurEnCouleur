@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 import ModelsList from '../ModelsList/index';
 import FormContainer from '../FormContainer/index';
 import ListeCouleurs from '../ListeCouleurs/index';
+import BtnPlanche from '../BtnPlanche/index';
+import AmountButton from '../AmountButton/index';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -15,13 +17,19 @@ class LeftSide extends Component {
   render() {
     if (this.props.location.pathname === '/calendrier/1') {
       return (
-        <div className="left-container">Planches</div>
+        <div className="left-container">
+          <BtnPlanche />
+        </div>
       );
     }
     if (this.props.location.pathname === '/calendrier/2') {
       return (
         <div className="left-container">
+          <p className="bold-item">2. Choisissez le nombre de fleurs</p>
+          <AmountButton />
+          <p className="bold-item">3. Choisissez un package ...</p>
           <ModelsList />
+          <p className="bold-item">... et personnalisez</p>
           <ListeCouleurs />
         </div>
       );
@@ -33,7 +41,9 @@ class LeftSide extends Component {
     }
     if (this.props.location.pathname === '/recharge/1') {
       return (
-        <div className="left-container">Couleurs</div>
+        <div className="left-container">
+          zzz
+        </div>
       );
     }
     if (this.props.location.pathname === '/recharge/2') {
