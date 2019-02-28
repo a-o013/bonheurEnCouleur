@@ -10,7 +10,6 @@ class Facture extends Component {
   }
 
   render() {
-    console.log(this.props);
     const tableItems = Object.keys(this.props.resume).map(key => (
       <tr>
         <td>
