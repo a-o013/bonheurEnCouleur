@@ -10,6 +10,22 @@ class Facture extends Component {
   }
 
   render() {
+    const tableItems = Object.keys(this.props.resume).map(key => (
+      <tr>
+        <td>
+          <img className="images" src={`/flowers/${key}.png`} alt="flower" />
+        </td>
+        <td>{key}</td>
+        <td>
+          {this.props.resume[key]}
+        </td>
+        <td>  0,50 </td>
+        <td>
+          {(0.5 * this.props.resume[key])}
+          €
+        </td>
+      </tr>
+    ));
     return (
       <div className="facture">
         <div className="facture__header">
@@ -20,17 +36,19 @@ class Facture extends Component {
         <div className="facture__contact">
           <div className="facture__contact__address">
             <p>
-              {`${this.props.order.nom_complet}${this.props.order.prenom_complet}`}
+              {this.props.order.nom_complet}
+              {this.props.order.prenom_complet}
             </p>
             <p>
               <br />
-              {`${this.props.order.rue_livraison}`}
+              {this.props.order.rue_livraison}
               <br />
-              {`${this.props.order.postcode_livraison}${this.props.order.commune_livraison}`}
+              {this.props.order.postcode_livraison}
+              {this.props.order.commune_livraison}
             </p>
           </div>
           <p className="facture__contact__date">
-            {`${new Date().toISOString().slice(0, 10)}`}
+            {new Date().toISOString().slice(0, 10)}
           </p>
         </div>
 
@@ -38,35 +56,15 @@ class Facture extends Component {
           <table className="facture__tab__compteur">
             <thead>
               <tr>
-                <td>Désignation</td>
-                <td>Quantité</td>
-                <td>Prix unitaire</td>
-                <td>Prix total</td>
+                <th>Désignation</th>
+                <th>Référence</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Prix total</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>fleur 1</td>
-                <td>50</td>
-                <td>1</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>planche</td>
-                <td>1</td>
-                <td>20</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td> 6 </td>
-                <td>3</td>
-                <td>1</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td colSpan="3"> TOTAL A PAYER :</td>
-                <td colSpan="1">73€</td>
-              </tr>
+              {tableItems}
             </tbody>
           </table>
         </div>
@@ -91,6 +89,7 @@ class Facture extends Component {
 
 const mapStateToProps = state => ({
   order: state.Reducer.order,
+  resume: state.Reducer.resumerFleurs,
 });
 
 export default connect(mapStateToProps)(Facture);
