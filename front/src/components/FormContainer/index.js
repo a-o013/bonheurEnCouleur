@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { toPDF } from '../../actions/actions';
 import FormComponent from '../FormComponent/index';
+import './index.scss';
 
 class FormContainer extends React.Component {
   constructor(props) {
@@ -38,10 +39,10 @@ class FormContainer extends React.Component {
 
   render() {
     return (
-      <Fragment>
+      <div className={this.props.name}>
         <FormComponent onSubmit={data => this.handleSubmit(data)} />
         <span className="popupcommande" ref={(el) => { this.popup = el; }}>Merci pour votre commande ! Vous recevrez un e-mail dʾici quelques minutes ... </span>
-      </Fragment>
+      </div>
     );
   }
 }

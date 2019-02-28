@@ -26,6 +26,11 @@
               display: flex;
               margin-left: 20px;
           }
+          .under-container {
+            display: flex;
+            margin-left: 20px;
+            align-items: flex-start;
+        }
           .planches_simulator{
               width: 750px;
               top: 70px;
@@ -40,6 +45,18 @@
               }
               &_choco{
                 z-index: 0;
+              }
+              &_choco_under {
+                z-index: 0;
+                top: 675px;
+              }
+              &_on_under {
+                z-index: 1;
+                top: 675px;
+              }
+              &_off_under {
+                z-index: -1;
+                top: 675px;
               }
           }
     }
@@ -155,6 +172,38 @@
                     display: flex;
                     margin-left: calc((100vw - 500px - 660px)/2);
                     align-items: flex-start;
+                }
+                .under-container {
+                    margin-top: 130px;
+                    margin-left: calc((100vw - 500px - 660px)/2);
+                }
+                .planches_simulator{
+                    width: 750px;
+                    top: 70px;
+                    left: 50%;
+                    transform: translate(- 50%);
+                    position: absolute;
+                    &_on {
+                        z-index: 1;
+                    }
+                    &_off{
+                        z-index: -1;
+                    }
+                    &_choco{
+                      z-index: 0;
+                    }
+                    &_choco_under {
+                      z-index: 0;
+                      top: 70px;
+                    }
+                    &_on_under {
+                      z-index: 1;
+                      top: 70px;
+                    }
+                    &_off_under {
+                      z-index: -1;
+                      top: 70px;
+                    }
                 }
             }
         }
