@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 // import { PropTypes } from 'prop-types';
 import html2canvas from 'html2canvas';
