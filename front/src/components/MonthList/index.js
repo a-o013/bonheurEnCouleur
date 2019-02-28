@@ -50,7 +50,7 @@ class MonthList extends Component {
 
   render() {
     const months = table.map(elem => (
-      <FlowerList column={elem.key} />
+      <FlowerList key={elem.key} column={elem.key} />
     ));
     return (
       <ul className="month-list">
