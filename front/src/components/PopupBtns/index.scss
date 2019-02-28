@@ -28,21 +28,7 @@
 
 @media screen and (min-width: 1200px) {
     .popUp {
-        width: calc(100vw - 500px);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .popUp_btn{
-        &_mobile{
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 560px) {
-    .popUp {
-        display: flex;
+        width: calc(100vw - 500px);isplay: flex;
         justify-content: center;
         flex-direction: column;
         margin-left: 30px
