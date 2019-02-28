@@ -13,7 +13,7 @@ const defaultState = {
   regulator: 0,
   total: 0,
   prix: 0,
-  resumerFleurs: [],
+  resumerFleurs: {},
   warning: {},
   currentAmount: data.counters,
 };
