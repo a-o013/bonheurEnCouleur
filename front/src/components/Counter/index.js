@@ -81,15 +81,15 @@ class Counter extends Component {
   render() {
     return (
       <div className="info_conteurs">
-        <p className="bold-item info_conteurs_elem">
-          Total fleurs:
-          {(this.props.match.params.section === 'calendrier' ? this.state.totalArray.length : 0)}
-        </p>
-        <p className="bold-item info_conteurs_elem">
+        <span className="bold-item_conteur">
+          Fleurs:
+          {(this.props.match.params.section === 'calendrier' ? ` ${this.state.totalArray.length}` : 0)}
+        </span>
+        <span className="bold-item_conteur">
           Prix:
-          {(this.props.match.params.section === 'calendrier' ? this.state.price : 0)}
+          {(this.props.match.params.section === 'calendrier' ? ` ${this.state.price}` : 0)}
           €
-        </p>
+        </span>
       </div>
     );
   }

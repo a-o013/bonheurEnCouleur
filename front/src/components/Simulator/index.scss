@@ -22,7 +22,10 @@
           display: flex;
           justify-content: center;
           flex-direction: column;
-          
+          .bottom-container {
+              display: flex;
+              margin-left: 20px;
+          }
           .planches_simulator{
               width: 750px;
               top: 70px;
@@ -148,6 +151,11 @@
                 margin-left: 500px;
                 width: calc(100vw - 500px);
                 height: 100vh;
+                .bottom-container {
+                    display: flex;
+                    margin-left: calc((100vw - 500px - 660px)/2);
+                    align-items: flex-start;
+                }
             }
         }
     }
@@ -156,5 +164,26 @@
 @media screen and (min-width: 670px) {
     .preview-container {
         width: 100vw;
+    }
+}
+
+@media screen and (min-height: 720px) and (max-width: 560px) {
+    .bottom-container {
+        justify-content: space-between;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .bottom-container {
+        position: fixed;
+        top: 550px;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    .bottom-container {
+        position: relative;
+        top: 0px;
     }
 }

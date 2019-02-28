@@ -26,17 +26,9 @@
     color: #fff;
 }
 
-.popUp_btn_div {
-    display: flex;
-}
-
-@media screen and (min-width: 500px){
-    .popUp{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        bottom: 0px;
+@media screen and (min-width: 1200px) {
+    .popUp {
+        width: calc(100vw - 500px);
     }
 }
 
@@ -45,5 +37,20 @@
         &_mobile{
             display: none;
         }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .popUp {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 30px
+    }
+}
+
+@media screen and (min-width: 670px) and (max-width:1200px) {
+    .popUp {
+        margin-left: 120px;
     }
 }

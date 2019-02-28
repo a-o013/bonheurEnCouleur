@@ -1,29 +1,13 @@
 .info_conteurs{
     display: flex;
-    margin: 0;
-    &_elem{
-        padding: 15px;
-        margin: 0;
-    }
+    justify-content: center;
+    flex-direction: column;
 }
 
 .bold-item_conteur {
+    white-space: nowrap;
     font-size: 20px;
     font-family: "Quicksand";
     color: #102643;
-    margin:0;
-    padding: 0;
 }
 
-@media screen and (min-width: 500px){
-    .info_conteurs{
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .info_conteurs{
-        float: left;
-    }
-}

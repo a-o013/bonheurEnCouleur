@@ -40,7 +40,7 @@ class DetailCommande extends Component {
 }
 
 const mapStateToProps = state => ({
-  resumerFleurs: state.resumerFleurs,
+  resumerFleurs: state.Reducer.resumerFleurs,
 });
 
 const mapDispatchToProps = dispatch => (
