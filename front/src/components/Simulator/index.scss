@@ -11,7 +11,7 @@
         height: 70px;
         position: fixed;
         width: 100%;
-        z-index: 2;
+        z-index: 3;
     }
     .main-container {
         display: flex;
@@ -79,7 +79,7 @@
             display:none;
         }
         &_card{
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: #FFFFFF;
             padding: 40px;
         }
     }
