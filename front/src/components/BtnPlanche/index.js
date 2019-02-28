@@ -3,8 +3,8 @@ import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeGris, changeChoco } from '../../actions/actions';
-import plancheChoco from '../../assets/images/Planche_chocolat.png';
-import plancheGrise from '../../assets/images/Planche_grise.png';
+import plancheChoco from '../../assets/images/planche_chocolat.png';
+import plancheGrise from '../../assets/images/planche_grise.png';
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({ changeGris, changeChoco }, dispatch)
