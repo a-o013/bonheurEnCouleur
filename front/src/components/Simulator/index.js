@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Snackbar } from '@material-ui/core';
@@ -8,6 +9,7 @@ import LeftSide from '../LeftSide/index';
 import StepBar from '../StepBar/index';
 import NextButton from '../NextButton/index';
 import PreviousButton from '../PreviousButton/index';
+import FormContainer from '../FormContainer/index';
 import MonthList from '../MonthList/index';
 import Counter from '../Counter/index';
 import DetailCommande from '../DetailCommande/index';
@@ -75,6 +77,8 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
+              <FormContainer />
+              <NavLink to="/calendrier/3">3</NavLink>
               <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
               <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <MonthList />

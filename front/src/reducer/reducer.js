@@ -2,6 +2,7 @@ import data from '../assets/models.json';
 
 const defaultState = {
   step: 1,
+  order: {},
   currentPlanche: 'on',
   popUpColors: 'off',
   popUpPackages: 'off',
@@ -29,6 +30,12 @@ const Reducer = (state = defaultState, action) => {
         ...state,
         step: state.step - 1,
       };
+    case 'TOPDF':
+      return {
+        ...state,
+        order: action.payload,
+      };
+
     case 'SELECTGRAY':
       return {
         ...state,

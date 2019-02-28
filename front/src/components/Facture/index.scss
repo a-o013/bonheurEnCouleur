@@ -1,0 +1,59 @@
+.facture__header{
+    margin:10px;
+    display:flex;
+    justify-content: space-between;
+    &__num{
+        font-family: "Quicksand";
+        font-size: 14px;
+        color: #102643;
+    }
+    &__logo{
+        width:100px;
+        height:100px;
+        }
+}
+.facture__contact{
+    margin:20px;
+    display:flex;
+    justify-content: space-between;
+    &__address{
+        font-family: "Quicksand";
+        font-size: 14px;
+        color: #102643;
+    }
+    &__date{
+        font-family: "Quicksand";
+        font-size: 14px;
+        color: #102643;
+
+    }
+}
+
+.facture__tab{
+    text-align: right;
+    &__compteur{
+        border-width:1px; 
+        border-style:solid; 
+        border-color:black;
+        width:80%;
+        margin-left: 10%;
+        font-family: "Quicksand";
+    }
+    &__total{
+        width:20%;
+        margin-left: 70%;
+        font-family: "Quicksand";
+    }
+}
+
+.facture__validation{
+    &__title{
+        font-family: "Quicksand";
+        font-size:14px;
+        text-decoration: underline;
+    }
+    &__corps{
+        font-family: "Quicksand";
+        font-size: 14px;
+    }
+}
