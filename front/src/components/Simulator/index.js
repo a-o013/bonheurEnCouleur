@@ -19,6 +19,7 @@ import FlowerPack from '../FlowerPack/index';
 import plancheChoco from '../../assets/images/Planche_chocolat.png';
 import plancheGrise from '../../assets/images/Planche_grise.png';
 import BtnPlanche from '../BtnPlanche/index';
+import FormContainer from '../FormContainer/index';
 
 class Simulator extends Component {
   constructor(props) {
@@ -108,11 +109,14 @@ class Simulator extends Component {
           <div className="main-container">
             <LeftSide />
             <div className="preview-container">
-              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
-              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
+              <img src={plancheGrise} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}_under`} />
+              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco_under" />
+              <FormContainer name="form-container" />
               <MonthList />
-              <Counter />
-              <DetailCommande />
+              <div className="under-container">
+                <Counter />
+                <DetailCommande />
+              </div>
             </div>
           </div>
         </div>

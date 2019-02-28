@@ -21,6 +21,7 @@
     height: 200px;
     width: 310px;
     overflow: scroll;
+    z-index: 5;
 }
 
   /* Toggle this class - hide and show the popup */
@@ -36,6 +37,7 @@
     width: 140px;
     height: 40px;
     margin: 5px;
+    margin-left: 20px;
     border: 2px solid #DDAD9F;
     border-radius: 40px;
     color: #DDAD9F;
@@ -97,9 +99,9 @@
 
 @media screen and (min-width: 500px) {
         .btn_detail {
-            top: -74px;
+            
             position: relative;
-            left: 308px;
+            
         }
         .popupTextDetail {
             left:90%;

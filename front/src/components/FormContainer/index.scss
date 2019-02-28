@@ -1,0 +1,9 @@
+.form-container {
+    margin-top: 70px;
+}
+
+@media screen and (min-width: 1200px) {
+    .form-container {
+        display: none;
+    }
+}
