@@ -1,8 +1,9 @@
 .info_conteurs{
     display: flex;
-    justify-content: center;
+    margin: 0;
     &_elem{
         padding: 15px;
+        margin: 0;
     }
 }
 
@@ -11,4 +12,18 @@
     font-family: "Quicksand";
     color: #102643;
     margin:0;
+    padding: 0;
+}
+
+@media screen and (min-width: 500px){
+    .info_conteurs{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .info_conteurs{
+        float: left;
+    }
 }

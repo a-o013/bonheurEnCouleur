@@ -81,11 +81,11 @@ class Counter extends Component {
   render() {
     return (
       <div className="info_conteurs">
-        <p className="bold-item_conteur info_conteurs_elem">
+        <p className="bold-item info_conteurs_elem">
           Total fleurs:
           {(this.props.match.params.section === 'calendrier' ? this.state.totalArray.length : 0)}
         </p>
-        <p className="bold-item_conteur info_conteurs_elem">
+        <p className="bold-item info_conteurs_elem">
           Prix:
           {(this.props.match.params.section === 'calendrier' ? this.state.price : 0)}
           €
