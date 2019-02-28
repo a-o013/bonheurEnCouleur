@@ -1,5 +1,25 @@
 import data from '../assets/models.json';
 
+function upTotal(elem) {
+  let counter = 0;
+  for (let i = 0; i < 48; i + 1) {
+    if (elem[i] !== 0) {
+      counter += elem[i];
+    }
+  }
+  return counter;
+}
+
+function upDetail(elem) {
+  const obj = {};
+  for (let i = 0; i < elem.length; i + 1) {
+    if (elem[i] !== 0) {
+      obj[i + 1] = elem[i];
+    }
+  }
+  return obj;
+}
+
 const defaultState = {
   step: 1,
   currentPlanche: 'on',
@@ -15,9 +35,11 @@ const defaultState = {
   resumerFleurs: [],
   warning: {},
   currentAmount: data.counters,
+  totalRecharge: 0,
+  detailRecharge: {},
 };
 
-const Reducer = (state = defaultState, action) => {
+const Reducer = (state = defaultState, action, upTot = upTotal, upDet = upDetail) => {
   switch (action.type) {
     case 'NEXTSTEP':
       return {
@@ -197,6 +219,12 @@ const Reducer = (state = defaultState, action) => {
       return {
         state,
         currentAmount: state.currentAmount,
+      };
+    case 'UPRECHARGE':
+      return {
+        ...state,
+        totalRecharge: upTot(state.currentAmount),
+        detailRecharge: upDet(state.currentAmount),
       };
     default:
       return state;

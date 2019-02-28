@@ -3,7 +3,12 @@ import './index.scss';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { totals, setPrice, setResumerflower } from '../../actions/actions';
+import {
+  totals,
+  setPrice,
+  setResumerflower,
+  upRecharge,
+} from '../../actions/actions';
 
 class Counter extends Component {
   constructor(props) {
@@ -12,6 +17,8 @@ class Counter extends Component {
       totalArray: [],
       price: 0,
       finalArray: [],
+      totalRecharge: 0,
+      detailRecharge: {},
     };
   }
 
@@ -34,6 +41,9 @@ class Counter extends Component {
 
     if (prevState.finalArray !== this.state.finalArray) {
       this.props.setResumerflower(this.state.finalArray);
+    }
+    if (prevProps.currentAmount !== this.props.currentAmount) {
+      this.props.upRecharge();
     }
   }
 
@@ -79,6 +89,9 @@ class Counter extends Component {
 
 
   render() {
+    console.log(this.state.totalRecharge, 'total');
+    console.log(this.state.detailRecharge, 'detail');
+
     return (
       <div>
         <p className="bold-item">
@@ -98,10 +111,16 @@ class Counter extends Component {
 const mapStateToProps = state => ({
   amount: state.Reducer.amount,
   currentPreview: state.Reducer.currentPreview,
+  currentAmount: state.Reducer.currentAmount,
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({ totals, setPrice, setResumerflower }, dispatch)
+  bindActionCreators({
+    totals,
+    setPrice,
+    setResumerflower,
+    upRecharge,
+  }, dispatch)
 );
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Counter));

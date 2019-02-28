@@ -96,3 +96,7 @@ export const changeAmount = object => ({
   type: 'CHANGEAMOUNT',
   payload: object,
 });
+
+export const upRecharge = () => ({
+  type: 'UPRECHARGE',
+});
