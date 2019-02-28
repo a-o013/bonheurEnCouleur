@@ -19,7 +19,11 @@ class FormContainer extends React.Component {
         headers: new Headers({
           'Content-Type': 'application/json',
         }),
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          flowers: this.props.resume,
+          plank: this.props.plank === 'on' ? 'grise' : 'chocolat',
+          userData: values,
+        }),
       })
       .then((res) => {
         if (res.status === 200) {
@@ -47,8 +51,13 @@ class FormContainer extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  plank: state.Reducer.currentPlanche,
+  resume: state.Reducer.resumerFleurs,
+});
+
 const mapDispatchToProps = dispatch => (
   bindActionCreators({ toPDF }, dispatch)
 );
 
-export default connect(null, mapDispatchToProps)(FormContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FormContainer);

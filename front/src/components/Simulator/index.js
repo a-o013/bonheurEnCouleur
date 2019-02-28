@@ -16,8 +16,8 @@ import PopupBtns from '../PopupBtns/index';
 import ModelsList from '../ModelsList';
 import AmountButton from '../AmountButton';
 import FlowerPack from '../FlowerPack/index';
-import plancheChoco from '../../assets/images/Planche_chocolat.png';
-import plancheGrise from '../../assets/images/Planche_grise.png';
+import plancheChoco from '../../assets/images/planche_chocolat.png';
+import plancheGrise from '../../assets/images/planche_grise.png';
 import BtnPlanche from '../BtnPlanche/index';
 import FormContainer from '../FormContainer/index';
 

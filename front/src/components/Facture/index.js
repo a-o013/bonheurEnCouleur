@@ -1,27 +1,43 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { connect } from 'react-redux';
+import planchechocolat from '../../assets/images/planche_chocolat.png';
+import planchegrise from '../../assets/images/planche_grise.png';
 
 class Facture extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      flowers: {},
+      plank: 'grise',
+      userData: {},
     };
   }
 
+  componentDidMount() {
+    fetch('/api/create-invoice')
+      .then(res => res.json())
+      .then(data => this.setState(
+        {
+          flowers: data.flowers,
+          plank: data.plank,
+          userData: data.userData,
+        },
+      ));
+  }
+
   render() {
-    const tableItems = Object.keys(this.props.resume).map(key => (
+    const tableItems = Object.keys(this.state.flowers).map(key => (
       <tr>
         <td>
           <img className="images" src={`/flowers/${key}.png`} alt="flower" />
         </td>
         <td>{key}</td>
         <td>
-          {this.props.resume[key]}
+          {this.state.flowers[key]}
         </td>
         <td>  0,50 </td>
         <td>
-          {(0.5 * this.props.resume[key])}
+          {(0.5 * this.state.flowers[key])}
           €
         </td>
       </tr>
@@ -36,20 +52,21 @@ class Facture extends Component {
         <div className="facture__contact">
           <div className="facture__contact__address">
             <p>
-              {this.props.order.nom_complet}
-              {this.props.order.prenom_complet}
+              {this.state.userData.nom_complet}
+              {this.state.userData.prenom_complet}
             </p>
             <p>
               <br />
-              {this.props.order.rue_livraison}
+              {this.state.userData.rue_livraison}
               <br />
-              {this.props.order.postcode_livraison}
-              {this.props.order.commune_livraison}
+              {this.state.userData.postcode_livraison}
+              {this.state.userData.commune_livraison}
             </p>
           </div>
           <p className="facture__contact__date">
             {new Date().toISOString().slice(0, 10)}
           </p>
+          <p>this.state.userData.tvasociety:</p>
         </div>
 
         <div className="facture__tab">
@@ -64,6 +81,19 @@ class Facture extends Component {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>
+                  <img className="images" src={this.state.plank === 'grise' ? planchegrise : planchechocolat} alt="flower" />
+                </td>
+                <td>1</td>
+                <td>
+                  {`planche ${this.state.plank}`}
+                </td>
+                <td>  20 €</td>
+                <td>
+                  20 €
+                </td>
+              </tr>
               {tableItems}
             </tbody>
           </table>
@@ -87,9 +117,4 @@ class Facture extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  order: state.Reducer.order,
-  resume: state.Reducer.resumerFleurs,
-});
-
-export default connect(mapStateToProps)(Facture);
+export default Facture;
