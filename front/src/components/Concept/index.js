@@ -31,14 +31,14 @@ class Concept extends Component {
             <div className="container_text_1">
               <p className="container_text_text">
                 Des calendriers d’anniversaires
-                <ul>
-                  <li>décoratifs et originaux</li>
-                  <li>
-                    100% personnalisables pour s’associer au mieux à votre décoration intérieure
-                  </li>
-                  <li>fabriqués main en Belgique</li>
-                </ul>
               </p>
+              <ul>
+                <li>décoratifs et originaux</li>
+                <li>
+                  100% personnalisables pour s’associer au mieux à votre décoration intérieure
+                </li>
+                <li>fabriqués main en Belgique</li>
+              </ul>
             </div>
             <img className="img1" src={img1} alt="imgconcept" data-aos="fade-left" />
           </div>
@@ -77,20 +77,20 @@ class Concept extends Component {
               <p className="container_text_text">
                 Avec le simulateur ci-dessous vous pouvez créer votre propre calendrier en
                 quelques étapes seulement :
-                <ol>
-                  <li>{`Choisissez la couleur de votre planche ${'"Birthdays"'} (gris ou chocolat).`}</li>
-                  <li>Choisissez le nombre de fleurs que vous souhaitez commander.</li>
-                  <li>
-                    Choisissez le ton de couleurs que vous souhaitez
-                    (mauve, rose, rouge, orange, ou turquoise).
-                  </li>
-                  <li>
-                    Si la combinaison proposée ne vous convient pas,
-                    choisissez vous mêmes les fleurs que vous souhaitez pour votre calendrier,
-                    parmi une palette de 48 motifs.
-                  </li>
-                </ol>
               </p>
+              <ol>
+                <li>{`Choisissez la couleur de votre planche ${'"Birthdays"'} (gris ou chocolat).`}</li>
+                <li>Choisissez le nombre de fleurs que vous souhaitez commander.</li>
+                <li>
+                  Choisissez le ton de couleurs que vous souhaitez
+                  (mauve, rose, rouge, orange, ou turquoise).
+                </li>
+                <li>
+                  Si la combinaison proposée ne vous convient pas,
+                  choisissez vous mêmes les fleurs que vous souhaitez pour votre calendrier,
+                  parmi une palette de 48 motifs.
+                </li>
+              </ol>
             </div>
             <img className="img1" src={img3} alt="imgconcept" data-aos="fade-left" />
           </div>

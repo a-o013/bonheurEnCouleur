@@ -18,7 +18,7 @@ class DetailCommande extends Component {
 
   render() {
     const popupContent = Object.keys(this.props.resumerFleurs).map(key => (
-      <li className="detail_li">
+      <li key={key} className="detail_li">
         <img src={`/flowers/${key}.png`} alt="flower" className="images_detail" />
         <span className="text_detail">
           X
