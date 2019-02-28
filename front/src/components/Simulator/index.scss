@@ -20,27 +20,20 @@
           margin: 0 auto;
           width: 700px;
           display: flex;
-          justify-content: center;
           flex-direction: column;
           .bottom-container {
               display: flex;
               margin-left: 20px;
           }
+          .under-container {
+            display: flex;
+            margin-left: 20px;
+            align-items: flex-start;
+        }
           .planches_simulator{
+              margin-top: 70px;
               width: 750px;
-              top: 70px;
-              left: 50%;
-              transform: translate(- 50%);
-              position: absolute;
-              &_on {
-                  z-index: 1;
-              }
-              &_off{
-                  z-index: -1;
-              }
-              &_choco{
-                z-index: 0;
-              }
+              margin-left: -30px;
           }
     }
 }
@@ -156,6 +149,15 @@
                     margin-left: calc((100vw - 500px - 660px)/2);
                     align-items: flex-start;
                 }
+                .under-container {
+                    margin-top: 130px;
+                    margin-left: calc((100vw - 500px - 660px)/2);
+                }
+                .planches_simulator{
+                    width: 750px;
+                    margin-top: 70px;
+                    margin-left: calc((100vw - 500px - 750px)/2);
+                }
             }
         }
     }
@@ -170,7 +172,9 @@
 @media screen and (min-height: 720px) and (max-width: 560px) {
     .bottom-container {
         justify-content: space-between;
+        align-items: flex-start;
         width: 90%;
+        margin-top: 10px;
     }
 }
 
@@ -178,6 +182,7 @@
     .bottom-container {
         position: fixed;
         top: 550px;
+        margin-top: 10px;
     }
 }
 
