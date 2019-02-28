@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { connect } from 'react-redux';
 import planchechocolat from '../../assets/images/planche_chocolat.png';
 import planchegrise from '../../assets/images/planche_grise.png';
 
@@ -10,28 +9,23 @@ class Facture extends Component {
     this.state = {
       flowers: {},
       plank: 'grise',
-      userData: {}
+      userData: {},
     };
   }
-  componentDidUpdate() {
-    console.log(this.state.plank, 'state')
-  }
+
   componentDidMount() {
     fetch('/api/create-invoice')
       .then(res => res.json())
-      .then(data => {
-        console.log(data, 'data')
-        this.setState(
-          {
-            flowers: data.flowers,
-            plank: data.plank,
-            userData: data.userData
-          }
-        )
-      })
+      .then(data => this.setState(
+        {
+          flowers: data.flowers,
+          plank: data.plank,
+          userData: data.userData,
+        },
+      ));
   }
+
   render() {
-    console.log(this.state.plank)
     const tableItems = Object.keys(this.state.flowers).map(key => (
       <tr>
         <td>
@@ -89,11 +83,11 @@ class Facture extends Component {
             <tbody>
               <tr>
                 <td>
-                  <img className="images" src={this.state.plank === "grise" ? planchegrise : planchechocolat} alt="flower" />
+                  <img className="images" src={this.state.plank === 'grise' ? planchegrise : planchechocolat} alt="flower" />
                 </td>
                 <td>1</td>
                 <td>
-                {`planche ${this.state.plank}`}
+                  {`planche ${this.state.plank}`}
                 </td>
                 <td>  20 €</td>
                 <td>
