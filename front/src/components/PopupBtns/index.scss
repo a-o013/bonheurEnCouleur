@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     bottom: 30px;
+    flex-direction: column;
+
 }
 .popUp_btn {
     padding: 0;
@@ -19,6 +21,7 @@
     background: transparent;
     cursor: pointer;
 }
+
 .popUp_btn:hover {
     background-color: #DDAD9F;
     color: #fff;
@@ -27,13 +30,24 @@
 @media screen and (min-width: 1200px) {
     .popUp {
         width: calc(100vw - 500px);
-        flex-direction: column;
         margin-left: 30px
+    }
+    .popUp_btn_mobile{
+        display: none;
     }
 }
 
 @media screen and (min-width: 670px) and (max-width:1200px) {
     .popUp {
         margin-left: 120px;
+
     }
 }
+
+@media screen and (min-width: 560px)  {
+    .popUp {
+        flex-direction: row;
+
+    }
+}
+

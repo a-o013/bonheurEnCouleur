@@ -1,10 +1,29 @@
 .form-container {
     margin-top: 70px;
-    margin: 0 auto;
+    margin-left: 0 auto;
 }
 
 @media screen and (min-width: 1200px) {
     .form-container {
         display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .form-container {
+        margin-left: 20%;
+        
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .form-container {
+        margin-left: 4%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .form-container {
+        margin-left: 0%;
     }
 }

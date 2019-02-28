@@ -19,7 +19,7 @@
     font-size: 16px;
     height: 200px;
     width: 310px;
-    overflow: scroll;
+    overflow-y: scroll;
     z-index: 5;
 }
 
@@ -80,6 +80,8 @@
 .detail_li{
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 .text_detail{
     color:#FFFFFF;

@@ -52,7 +52,6 @@ class Simulator extends Component {
             <LeftSide />
             <div className="preview-container">
               <img src={this.props.currentPlanche === 'on' ? plancheGrise : plancheChoco} alt="btn_planche_grise" className={`planches_simulator planches_simulator_${this.props.currentPlanche}`} />
-              <img src={plancheChoco} alt="btn_planche_chocolat" className="planches_simulator planches_simulator_choco" />
               <BtnPlanche />
             </div>
           </div>
